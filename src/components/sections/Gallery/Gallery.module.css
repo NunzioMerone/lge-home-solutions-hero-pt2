@@ -1,0 +1,46 @@
+.section {
+  overflow: clip;
+  background: var(--color-paper);
+}
+.rail {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-block: 18px;
+}
+.heading {
+  margin-bottom: var(--section-heading-gap);
+  text-align: center;
+}
+.heading h2 {
+  margin: 0;
+  font-size: var(--font-size-section-title);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.heading em {
+  color: var(--color-brand-blue);
+  font-style: italic;
+  font-weight: 400;
+}
+.details {
+  margin-top: 18px;
+  padding-inline: var(--gutter);
+  text-align: center;
+}
+.detailsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-blue) 35%, transparent);
+  color: var(--color-blue);
+  font-size: 0.8125rem;
+}
+.detailsLink svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition);
+}
+.detailsLink:hover svg {
+  transform: translateX(4px);
+}

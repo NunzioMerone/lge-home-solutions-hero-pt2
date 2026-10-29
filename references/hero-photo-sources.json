@@ -1,0 +1,7 @@
+[
+  { "id": "security", "category": "Porte e sicurezza", "source": "/Users/nunziomerone/Downloads/Ingresso moderno in legno e vetro.png", "original": "references/hero-supplied/security.png", "width": 1383, "height": 1137 },
+  { "id": "interior", "category": "Porte interne", "source": "/Users/nunziomerone/Downloads/Soggiorno moderno con porta in legno.png", "original": "references/hero-supplied/interior.png", "width": 1500, "height": 1049 },
+  { "id": "shading", "category": "Oscuranti", "source": "/Users/nunziomerone/Desktop/Oscuranti e sicurezza.png", "original": "references/hero-supplied/shading.png", "width": 1539, "height": 1022 },
+  { "id": "windows", "category": "Infissi", "source": "/Users/nunziomerone/Desktop/infissi.jpg", "original": "references/hero-supplied/windows.jpg", "width": 1000, "height": 1000 },
+  { "id": "outdoor", "category": "Atelier Gibus", "source": "/Users/nunziomerone/Downloads/Pergola moderna al crepuscolo.png", "original": "references/hero-supplied/outdoor.png", "width": 1564, "height": 1006 }
+]

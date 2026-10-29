@@ -1,0 +1,76 @@
+{
+  "reviewedOn": "2026-10-28",
+  "scope": "Lettura dei sette documenti forniti in Attestati. Le scansioni e i dati identificativi personali non sono pubblicati sul sito.",
+  "technicalQualifications": [
+    {
+      "id": "qualified-installation",
+      "sources": ["Attestati/IMG_1107.HEIC", "Attestati/IMG_1108.HEIC"],
+      "issuer": "DEKRA Testing and Certification S.r.l.",
+      "documentedQualification": "Installatore / posatore di serramenti senior",
+      "standard": "UNI 11673-2:2019",
+      "issuedOn": "2023-12-12",
+      "expiresOn": "2029-12-11",
+      "editorialNote": "I documenti DEKRA ricevuti attestano la qualifica senior. Il livello aggiuntivo Caposquadra EQF 4 è stato confermato esplicitamente dal titolare il 28 ottobre 2026; non viene attribuito a DEKRA né presentato come contenuto degli attestati precedenti.",
+      "companyConfirmation": {
+        "confirmedOn": "2026-10-28",
+        "source": "Conferma esplicita del titolare in conversazione",
+        "qualification": "Caposquadra EQF 4"
+      }
+    },
+    {
+      "id": "posaclima",
+      "sources": ["Attestati/IMG_1105.HEIC", "Attestati/IMG_1106.HEIC"],
+      "issuer": "PosaClima",
+      "documentType": "Attestato di formazione professionale",
+      "documentedQualification": "Esperto posatore PosaClima e tecnico per la riqualificazione del foro finestra",
+      "standard": "UNI 11673-3",
+      "durationHours": 12,
+      "issuedOn": "2023-11-13",
+      "expiresOn": "2026-11-12",
+      "editorialNote": "La card descrive la formazione svolta; non la trasforma in una certificazione DEKRA o in una qualifica EQF 4. Verificare il rinnovo prima di presentare l’attestazione come attiva oltre la scadenza."
+    },
+    {
+      "id": "thermography",
+      "sources": ["I due PDF nominativi nella cartella Attestati"],
+      "issuer": "Infrared Training Center",
+      "documentedQualification": "Category 1 Thermographer",
+      "issuedOn": "2023-03-22",
+      "validityYears": 5,
+      "editorialNote": "Entrambi i certificati ITC ricevuti attestano la categoria 1. Il II livello è stato confermato esplicitamente dal titolare il 28 ottobre 2026; non viene attribuito a ITC né presentato come contenuto dei PDF precedenti.",
+      "companyConfirmation": {
+        "confirmedOn": "2026-10-28",
+        "source": "Conferma esplicita del titolare in conversazione",
+        "qualification": "Termografia di I e II livello"
+      }
+    }
+  ],
+  "recognitions": [
+    {
+      "id": "cosmet",
+      "source": "Attestati/IMG_1109.HEIC",
+      "documentedRecognition": "Cosmet Group - Top Partner - LGE Home Solution",
+      "eventDate": "2025-03-13",
+      "editorialNote": "I titoli Campioni della crescita e Leader della crescita stampati sulla targa riguardano il gruppo e non vengono attribuiti a LGE."
+    },
+    {
+      "id": "gibus",
+      "source": "Dichiarazione esplicita del titolare nella richiesta del 28 ottobre 2026",
+      "recognition": "Atelier ufficiale Gibus per tutta l’Area Flegrea"
+    },
+    {
+      "id": "new-solar-sikurhome",
+      "source": "Dichiarazione esplicita del titolare nella richiesta del 28 ottobre 2026",
+      "recognition": "Punto vendita di zona per New Solar e SikurHome"
+    },
+    {
+      "id": "velux",
+      "source": "Dichiarazione esplicita del titolare nella richiesta del 28 ottobre 2026",
+      "recognition": "Punto esposizione e vendita ufficiale VELUX"
+    },
+    {
+      "id": "bettio",
+      "source": "Dichiarazione esplicita del titolare nella richiesta del 28 ottobre 2026",
+      "recognition": "Punto esposizione e vendita ufficiale BETTIO"
+    }
+  ]
+}

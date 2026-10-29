@@ -1,0 +1,53 @@
+.action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 18px;
+  background: transparent;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 0;
+  font-size: 0.77rem;
+  transition: background var(--transition);
+}
+.action > svg {
+  width: 19px;
+  height: 19px;
+}
+.action > svg:last-child {
+  width: 17px;
+  height: 17px;
+  margin-left: auto;
+}
+.primary {
+  background: var(--color-blue);
+  color: white;
+}
+.action:hover:not(:disabled) {
+  background: var(--color-sky);
+}
+.primary:hover:not(:disabled) {
+  background: #174b80;
+}
+.action:disabled {
+  opacity: 0.5;
+}
+.compact {
+  width: auto;
+  min-height: 42px;
+  padding: 9px 0;
+  gap: 9px;
+  font-size: 0.73rem;
+  color: inherit;
+  border: 0;
+}
+.compact svg {
+  width: 16px;
+  height: 16px;
+}
+.compact > svg:last-child {
+  display: none;
+}

@@ -1,0 +1,1152 @@
+# LGE Home Solutions — Sviluppo completo della homepage
+
+Voglio iniziare lo sviluppo effettivo del sito web di **LGE Home Solutions**.
+
+Abbiamo già definito l'identità aziendale e la direzione estetica del progetto. Adesso voglio che tu realizzi la **homepage completa**, seguendo attentamente tutte le indicazioni che ti fornirò.
+
+Il sito deve avere una qualità visiva elevata, un'architettura pulita e un'esperienza di navigazione particolarmente curata.
+
+**La priorità assoluta è ottenere un risultato professionale sia su desktop sia su smartphone. Su mobile voglio un'esperienza spettacolare, non una versione ridotta e impoverita di quella desktop.**
+
+Non voglio un sito statico, ma non voglio neppure animazioni inutili o eccessive.
+
+L'obiettivo è un'esperienza premium: elegante, fluida, luminosa, contemporanea e accogliente.
+
+---
+
+# 1. Directory e organizzazione del lavoro
+
+Il workspace contiene il progetto LGE Home Solutions.
+
+La directory destinata al sito è:
+
+`LGE/Sito/`
+
+Prima di iniziare, verifica il percorso effettivo del workspace e controlla cosa è già presente.
+
+Tutto lo sviluppo deve avvenire esclusivamente nella directory `Sito`.
+
+Se esiste una directory `Hero_test`, non modificarla: appartiene a precedenti esperimenti.
+
+Se il progetto React è già configurato, riutilizzalo verificando dipendenze e struttura. Se non è ancora presente, inizializzalo.
+
+Non sovrascrivere asset originali.
+
+# 2. Tecnologie
+
+Voglio utilizzare:
+
+- React
+- TypeScript con strict mode
+- Vite
+- React Router
+- CSS Modules
+- CSS custom properties per i design token
+- GSAP e ScrollTrigger per animazioni e reveal dove necessario
+- Eventuali librerie leggere per caroselli e interazioni
+
+Scegli ulteriori librerie soltanto quando servono realmente.
+
+Non installare dipendenze superflue.
+
+Per i caroselli puoi valutare Embla Carousel oppure una soluzione equivalente affidabile, purché sia performante e accessibile.
+
+# 3. Regole obbligatorie per il codice
+
+Questa parte è importantissima.
+
+Voglio un progetto **completamente tipizzato, modulare, manutenibile e scalabile**.
+
+## TypeScript
+
+- Utilizza `strict: true`.
+- Evita `any`.
+- Definisci interfacce e type alias dedicati nella cartella `src/types/`.
+- Tipizza props, dati, configurazioni, eventi e funzioni.
+- Mantieni i componenti piccoli e con responsabilità precise.
+
+## Componenti e logica
+
+- Ogni sezione della homepage deve avere un componente dedicato.
+- Separa le sottoparti riutilizzabili.
+- Estrai le funzioni riutilizzabili nella cartella `utils`.
+- Estrai la logica riutilizzabile in custom hooks.
+- Non duplicare animazioni o comportamenti.
+- Centralizza i dati ripetuti in file di configurazione tipizzati.
+- Non creare un componente `Home.tsx` con centinaia di righe di markup e logica.
+
+## CSS
+
+**Non voglio stili inline nel codice React.**
+
+Quindi:
+
+- Non utilizzare `style={{ ... }}` nei componenti.
+- Non utilizzare CSS-in-JS.
+- Non creare lunghi blocchi di stile dentro i file TSX.
+- Utilizza CSS Modules dedicati ai componenti.
+- Centralizza colori, tipografia, spacing, breakpoint e altri token.
+- Utilizza classi CSS con nomi chiari.
+- Separa completamente presentazione e logica.
+
+GSAP potrà applicare trasformazioni temporanee agli elementi durante le animazioni. Questo è consentito, ma le proprietà visive strutturali devono risiedere nei CSS.
+
+## Organizzazione suggerita
+
+```text
+Sito/
+├── public/
+│   ├── img/
+│   └── fonts/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── layout/
+│   │   └── sections/
+│   │       ├── Hero/
+│   │       ├── Products/
+│   │       ├── Partners/
+│   │       ├── Certifications/
+│   │       ├── Gallery/
+│   │       ├── Reviews/
+│   │       └── Contacts/
+│   ├── pages/
+│   │   ├── Home/
+│   │   └── ProductPlaceholder/
+│   ├── hooks/
+│   ├── utils/
+│   ├── types/
+│   ├── config/
+│   ├── data/
+│   ├── styles/
+│   ├── App.tsx
+│   └── main.tsx
+```
+
+È una struttura indicativa: puoi migliorarla se trovi una soluzione più pulita.
+
+Non creare cartelle inutili soltanto per seguire rigidamente questo schema.
+
+---
+
+# 4. Identità visiva e palette colori
+
+Ti ho allegato un'immagine che definisce la palette ufficiale proposta per il sito.
+
+I colori sono:
+
+| Colore | HEX | Utilizzo |
+|---|---|---|
+| Blu LGE | `#205D9B` | Identità, CTA, link, elementi attivi |
+| Grigio LGE | `#6B6B6B` | Testi secondari |
+| Antracite | `#2F343A` | Titoli, sezioni scure, footer |
+| Bianco caldo | `#F7F5F1` | Sfondo principale |
+| Greige | `#EDE9E3` | Sezioni alternate |
+| Azzurro tenue | `#E8F0F8` | Piccoli dettagli |
+
+Usa questi colori come punto di partenza e centralizzali in variabili CSS.
+
+Non introdurre colori dominanti aggiuntivi non previsti.
+
+Le fotografie contribuiranno naturalmente a dare calore al sito.
+
+## Tipografia
+
+Voglio un abbinamento elegante:
+
+- Titoli con un serif moderno e raffinato, simile ai riferimenti grafici allegati.
+- Testi e interfaccia con un sans-serif moderno, estremamente leggibile.
+
+Puoi valutare Cormorant Garamond o un serif simile per i titoli e Manrope o DM Sans per testi e interfaccia.
+
+Non utilizzare troppi font o pesi diversi.
+
+## Estetica generale
+
+- Layout ordinato e ben allineato.
+- Molto spazio bianco.
+- Sfondo prevalentemente bianco caldo.
+- Sezioni ben distinte senza separatori pesanti.
+- Linee sottili e dettagli misurati.
+- Angoli poco arrotondati o squadrati.
+- Immagini architettoniche di alta qualità.
+- Animazioni eleganti e morbide.
+- Nessun elemento decorativo inutile.
+- Niente gradienti vistosi.
+- Nessuna estetica da dashboard o applicazione gestionale.
+
+Il risultato deve ricordare un sito premium dedicato al design e all'architettura.
+
+---
+
+# 5. Logo LGE
+
+**Il logo originale è già disponibile nella cartella `img` del progetto.**
+
+Prima di sviluppare la homepage, individua il file corretto e verifica che abbia sfondo trasparente.
+
+Utilizza sempre il logo originale.
+
+Non ridisegnarlo con CSS, non modificarne proporzioni, geometria, testo o colori.
+
+Se sono disponibili varianti specifiche del logo, utilizza quella appropriata in base allo sfondo.
+
+Se un'immagine ha qualità insufficiente, segnalamelo senza sostituirla arbitrariamente con un marchio ricreato.
+
+---
+
+# 6. HOME — Prima sezione: Hero
+
+Questa è la parte più importante della homepage.
+
+Voglio una hero particolare, animata e soprattutto diversa dalla classica homepage con una singola immagine statica e un titolo.
+
+L'hero sarà composta dal logo LGE, da una breve introduzione e da tre grandi sezioni fotografiche.
+
+## 6.1 — Animazione iniziale del logo
+
+Quando l'utente apre il sito deve succedere questo:
+
+### Fase 1 — Entrata
+
+Lo schermo inizialmente mostra uno sfondo bianco caldo.
+
+Al centro esatto dello schermo compare il logo originale LGE.
+
+Il logo entra con un'animazione delicata:
+
+- Fade-in.
+- Leggero movimento verticale.
+- Eventuale piccolo scale-in molto morbido.
+
+Non utilizzare effetti esagerati.
+
+In questa prima fase non devono comparire ancora le tre sezioni.
+
+### Fase 2 — Preparazione del contenuto
+
+Il logo resta al centro per un breve istante.
+
+Questo momento serve anche a consentire il caricamento delle risorse essenziali della hero.
+
+**Non creare però un loader artificiale che aspetta il caricamento di tutto il sito.**
+
+Precarica soltanto ciò che serve per mostrare correttamente la prima schermata.
+
+Se gli asset sono già pronti, l'animazione deve procedere rapidamente.
+
+Se il caricamento richiede troppo tempo, prevedi una gestione del timeout e un fallback.
+
+Non bloccare inutilmente la navigazione.
+
+### Fase 3 — Trasformazione
+
+Il logo si muove fluidamente dal centro dello schermo verso l'alto, mantenendosi centrato orizzontalmente.
+
+Contemporaneamente si ridimensiona.
+
+Il movimento deve essere continuo e preciso, senza che un logo scompaia e ne appaia improvvisamente un altro.
+
+Se opportuno, utilizza una tecnica FLIP o una transizione basata sulle reali posizioni degli elementi.
+
+### Fase 4 — Comparsa dei testi
+
+Una volta che il logo arriva in alto al centro, sotto di esso compare una breve introduzione.
+
+Per il momento usa Lorem ipsum.
+
+Il testo deve essere elegante, centrato e non troppo lungo.
+
+### Fase 5 — Comparsa delle tre sezioni
+
+Sotto al logo e al testo compaiono progressivamente tre grandi sezioni fotografiche.
+
+Su desktop saranno **una accanto all'altra, nella stessa riga**, con proporzioni equilibrate e spaziature precise.
+
+Non creare tre sezioni una sotto l'altra sul desktop.
+
+Le immagini devono comparire in modo dinamico:
+
+1. La prima entra con un reveal morbido.
+2. La seconda compare con un leggero ritardo.
+3. La terza completa la composizione.
+
+Puoi utilizzare clip-path reveal, fade e traslazioni leggere.
+
+Non utilizzare rimbalzi, rotazioni inutili o zoom esagerati.
+
+La composizione finale deve essere pulita, come nel concept grafico che abbiamo definito.
+
+**In questa prima hero non voglio una navbar tradizionale: il logo deve rimanere in alto al centro.**
+
+## 6.2 — Le tre sezioni
+
+Le tre sezioni corrispondono al payoff dell'azienda:
+
+**DESIGN — TUO — BENESSERE**
+
+Ogni sezione avrà:
+
+- Una fotografia di qualità elevata.
+- Il titolo principale.
+- Un brevissimo Lorem ipsum descrittivo.
+- Un'interazione hover elegante su desktop.
+- Un comportamento touch appropriato su mobile.
+
+### Sezione 01 — DESIGN
+
+Categoria rappresentata: **Porte blindate**.
+
+Immagine di una porta blindata premium installata in un ingresso contemporaneo.
+
+Tonalità calde, materiali curati, immagine elegante.
+
+Titolo:
+
+**DESIGN**
+
+### Sezione 02 — TUO
+
+Categoria rappresentata: **Infissi**.
+
+Ambiente moderno con infissi di qualità, grandi superfici vetrate e luce naturale.
+
+Titolo:
+
+**TUO**
+
+### Sezione 03 — BENESSERE
+
+Categoria rappresentata: **Atelier Gibus**.
+
+Ambiente outdoor elegante con una pergola bioclimatica, arredi raffinati e luce calda.
+
+Titolo:
+
+**BENESSERE**
+
+Non voglio però che Gibus sia visivamente sproporzionato rispetto alle altre due sezioni.
+
+Le tre immagini devono avere pari dignità, creando una composizione equilibrata.
+
+## 6.3 — Animazioni e interazioni
+
+Al passaggio del mouse, prevedi una micro-interazione premium:
+
+- Leggerissimo ingrandimento dell'immagine.
+- Eventuale aumento del contrasto o variazione di overlay.
+- Comparsa discreta di un link o di una freccia.
+- Transizione fluida quando il mouse esce.
+
+Non fare animazioni invadenti.
+
+La hero deve risultare già bella anche senza interazioni.
+
+## 6.4 — Hero mobile
+
+La versione smartphone è fondamentale.
+
+Non cercare di comprimere tre colonne in un display stretto.
+
+Voglio un layout progettato appositamente:
+
+- Logo centrato e ben proporzionato.
+- Testo sotto, con dimensioni leggibili.
+- Le tre sezioni presentate come grandi pannelli fotografici verticali uno dopo l'altro, con reveal progressivi durante lo scroll.
+- Titoli ben leggibili.
+- Fotografie tagliate correttamente.
+- Nessuna sovrapposizione.
+- Nessuno scroll orizzontale indesiderato.
+
+Su mobile le immagini devono essere composte per il formato verticale, non ritagliate casualmente.
+
+Anche su mobile deve essere presente la transizione iniziale del logo dal centro verso l'alto.
+
+Prevedi una versione ridotta delle animazioni per dispositivi meno performanti.
+
+---
+
+# 7. HOME — I nostri prodotti
+
+Subito dopo la hero ci sarà la sezione:
+
+# I nostri prodotti
+
+Sotto al titolo inserisci un breve testo Lorem ipsum.
+
+La sezione contiene cinque card fotografiche.
+
+Categorie esatte:
+
+1. Infissi
+2. Oscuranti
+3. Porte e sicurezza
+4. Porte interne
+5. Atelier Gibus
+
+## Design delle card
+
+Ogni card deve contenere:
+
+- Fotografia del prodotto.
+- Titolo.
+- Breve Lorem ipsum.
+- Link discreto "Scopri di più" con freccia.
+
+Utilizza fotografie coerenti con ciascuna categoria.
+
+Le immagini devono essere ben inquadrate e omogenee nell'aspetto.
+
+Su desktop vorrei cinque card su una riga, se lo spazio lo consente.
+
+Su tablet adatta la griglia.
+
+Su smartphone valuta un carosello orizzontale con swipe, card abbastanza grandi e un piccolo scorcio della successiva, oppure una soluzione verticale se visivamente migliore.
+
+La cosa più importante è che i prodotti rimangano leggibili e facilmente esplorabili.
+
+## Animazioni
+
+Quando la sezione entra nel viewport:
+
+- Il titolo compare delicatamente.
+- Il testo entra subito dopo.
+- Le card compaiono progressivamente.
+
+Vorrei una comparsa sfalsata e alternata:
+
+- Prima card leggermente dal basso.
+- Seconda con un ritardo.
+- Terza con un reveal fotografico.
+- Quarta e quinta completano la sequenza.
+
+Non devono sembrare cinque animazioni totalmente differenti.
+
+Utilizza un linguaggio di movimento coerente.
+
+## Navigazione delle card
+
+Tutte le card saranno cliccabili.
+
+Prepara con React Router i percorsi:
+
+```text
+/prodotti/infissi
+/prodotti/oscuranti
+/prodotti/porte-e-sicurezza
+/prodotti/porte-interne
+/atelier-gibus
+```
+
+Per il momento non realizzare le pagine dedicate.
+
+Quando vengono aperte, devono mostrare soltanto una pagina bianca provvisoria, senza prodotti o layout inventati.
+
+Non sviluppare le sezioni interne finché non te lo chiederò.
+
+---
+
+# 8. HOME — I nostri partner
+
+Subito dopo i prodotti ci sarà una sezione molto essenziale:
+
+# I nostri partner
+
+Non voglio card grandi o descrizioni per ogni marchio.
+
+Voglio una fila orizzontale ordinata di circa 6–7 loghi.
+
+I marchi definitivi verranno forniti successivamente.
+
+Per ora utilizza loghi dimostrativi o segnaposto chiaramente identificati come tali.
+
+Non presentare come partner ufficiali aziende di cui non abbiamo ancora verificato il rapporto commerciale.
+
+## Layout
+
+- Sfondo bianco caldo.
+- Titolo centrale.
+- Molto spazio bianco.
+- Loghi allineati otticamente.
+- Dimensioni visive equilibrate.
+- Eventuali separatori verticali sottilissimi.
+- Nessun box pesante intorno ai loghi.
+
+Su mobile i loghi devono rimanere ben visibili.
+
+Puoi utilizzare una fascia orizzontale a scorrimento lento, ma senza distrarre.
+
+---
+
+# 9. HOME — Le nostre competenze e certificazioni
+
+Subito dopo i partner ci sarà una sezione dedicata ai riconoscimenti professionali.
+
+Ti ho allegato un secondo riferimento grafico che descrive la direzione desiderata.
+
+La struttura di riferimento presenta:
+
+- Titolo principale centrato.
+- Breve testo introduttivo.
+- Quattro elementi dedicati alle competenze.
+- Un'immagine architettonica verticale sulla destra.
+
+Voglio reinterpretare questo layout in modo elegante e coerente con LGE, senza copiarlo rigidamente.
+
+## Titolo
+
+**Qualità certificata, risultati concreti**
+
+Eventuale etichetta superiore:
+
+"LE NOSTRE COMPETENZE"
+
+## Contenuti provvisori
+
+Attualmente sappiamo che l'azienda ha indicato competenze relative a:
+
+- PosaClima.
+- Qualifica EQF 4.
+- Termografia.
+- Soluzioni per l'efficienza energetica.
+
+**IMPORTANTE:** i certificati, gli enti emittenti, gli intestatari e le qualifiche effettivamente conseguite devono ancora essere confermati.
+
+Non inventare attestati.
+
+Non creare falsi loghi certificativi.
+
+Non presentare PosaClima ed EQF 4 come un unico certificato se la documentazione non lo conferma.
+
+Utilizza un dataset provvisorio tipizzato, facilmente aggiornabile.
+
+I testi secondari saranno per il momento Lorem ipsum.
+
+## Design
+
+Immagino quattro blocchi sobri, con:
+
+- Piccola icona.
+- Titolo.
+- Descrizione molto breve.
+- Eventuale elemento grafico sottile.
+
+A destra una fotografia architettonica verticale.
+
+Non appesantire la sezione con troppe immagini, effetti o colori.
+
+Questa sezione deve trasmettere affidabilità, formazione e professionalità.
+
+## Responsive
+
+Sul mobile non voglio quattro card minuscole.
+
+Utilizza una disposizione verticale o un carosello ben dimensionato.
+
+La fotografia può essere riposizionata o utilizzata come elemento secondario, senza compromettere la leggibilità.
+
+---
+
+# 10. HOME — I nostri lavori
+
+Questa è una delle sezioni più importanti.
+
+Titolo:
+
+# I nostri lavori
+
+Sotto, un breve Lorem ipsum introduttivo.
+
+## Galleria fotografica
+
+Voglio un carosello orizzontale con fotografie dei lavori.
+
+Deve comunicare la qualità dell'installazione e mostrare ambienti differenti.
+
+Categorie possibili:
+
+- Infissi.
+- Oscuranti.
+- Porte blindate.
+- Porte interne.
+- Outdoor.
+
+Per ora le immagini saranno provvisorie.
+
+Quando arriveranno le fotografie vere di LGE, sostituiremo gli asset.
+
+## Comportamento
+
+**Il carosello deve scorrere automaticamente.**
+
+L'animazione deve essere continua, molto fluida e abbastanza lenta da permettere di apprezzare le immagini.
+
+Non voglio scatti fra una card e l'altra.
+
+Tra le fotografie deve esserci un distacco visibile.
+
+Le immagini possono avere altezze uniformi e larghezze leggermente differenti, se questo migliora la composizione.
+
+Prevedi:
+
+- Autoplay fluido.
+- Loop continuo.
+- Supporto swipe su mobile.
+- Pausa durante le interazioni dell'utente, quando opportuno.
+- Accessibilità tramite tastiera.
+- Possibilità di fermare il movimento.
+- Rispetto di `prefers-reduced-motion`.
+
+Non sovrapporre il titolo alle fotografie.
+
+**Il titolo "I nostri lavori" deve stare sopra il carosello, su sfondo chiaro.**
+
+Puoi aggiungere un link testuale "Tutte le realizzazioni", ma non creare ancora la pagina relativa.
+
+---
+
+# 11. HOME — Cosa dicono di noi
+
+Subito dopo la gallery voglio una sezione dedicata alle recensioni.
+
+Titolo:
+
+# Dicono di noi
+
+Eventuale etichetta:
+
+"LE RECENSIONI"
+
+La struttura deve ispirarsi alla sezione recensioni del sito Sicilinfissi, mantenendo però lo stile visivo LGE.
+
+Voglio una sezione elegante, orizzontale e molto leggibile.
+
+## Layout
+
+Su desktop:
+
+- Titolo e testo introduttivo.
+- Richiamo discreto a Google Reviews.
+- Recensioni disposte in una fila orizzontale.
+- Card semplici, non eccessivamente arrotondate.
+
+Ogni recensione potrà contenere:
+
+- Nome dell'autore.
+- Valutazione reale.
+- Testo.
+- Eventuale data.
+- Indicazione della provenienza Google.
+
+## Dati Google
+
+In futuro dovremo utilizzare recensioni autentiche.
+
+Per il momento utilizza dati dimostrativi chiaramente identificati come "Demo", senza inventare una valutazione Google reale dell'azienda.
+
+Non presentare recensioni fittizie come testimonianze vere.
+
+Prepara un'architettura che consenta di sostituire il mock con dati reali da una fonte autorizzata, nel rispetto delle regole Google.
+
+Non fare scraping arbitrario.
+
+## Mobile
+
+Su smartphone utilizza un carosello di recensioni con swipe, leggibile e accessibile.
+
+Non mostrare tre o quattro recensioni compresse in una sola schermata.
+
+---
+
+# 12. HOME — Contatti
+
+Subito dopo le recensioni ci sarà la sezione contatti.
+
+Vorrei un layout diviso in due parti su desktop.
+
+## Sinistra — Mappa
+
+Una mappa dedicata alla sede LGE Home Solutions.
+
+L'azienda si trova a Monte di Procida, provincia di Napoli.
+
+La posizione precisa verrà confermata.
+
+Non inventare indirizzi.
+
+Se l'indirizzo non è presente nel progetto, utilizza un riferimento geografico provvisorio chiaramente segnalato.
+
+Prepara il componente affinché in seguito possa utilizzare la posizione esatta.
+
+## Destra — Contatti
+
+Titolo proposto:
+
+**Parliamo del tuo progetto**
+
+Sotto, un breve Lorem ipsum.
+
+Voglio mostrare:
+
+- Località.
+- Contatti telefonici.
+- Email.
+- WhatsApp.
+- Instagram.
+
+## WhatsApp
+
+Prevedi un pulsante ben riconoscibile:
+
+"Scrivici su WhatsApp"
+
+Al click dovrà aprire direttamente la conversazione WhatsApp con il numero aziendale, quando sarà disponibile.
+
+Per adesso non inventare numeri.
+
+Mantieni il valore in una configurazione centralizzata e non lasciare un collegamento finto che sembra funzionare.
+
+## Instagram
+
+Un pulsante o link secondario:
+
+"Seguici su Instagram"
+
+Anche l'URL reale verrà fornito successivamente.
+
+## Estetica
+
+- Sfondo chiaro.
+- Mappa ben integrata.
+- Titolo importante.
+- Testi ordinati.
+- Bottoni coerenti con i colori LGE.
+- Nessun modulo contatti aggiuntivo, salvo che te lo richieda successivamente.
+
+Su mobile la mappa e i contatti devono disporsi verticalmente, mantenendo dimensioni e spaziatura corrette.
+
+---
+
+# 13. HOME — Footer
+
+L'ultima sezione sarà il footer.
+
+Deve essere scuro, elegante e coerente con le palette LGE.
+
+Sfondo:
+
+`#2F343A`
+
+Puoi utilizzare una variante leggermente più scura se migliora la leggibilità.
+
+## Logo
+
+Utilizza la versione bianca del logo originale, se presente negli asset.
+
+Non ridisegnare il marchio.
+
+## Struttura
+
+Prevedi più colonne ben bilanciate.
+
+### Identità aziendale
+
+Logo bianco LGE e breve testo descrittivo.
+
+### Navigazione
+
+Collegamenti alle sezioni della homepage.
+
+### Prodotti
+
+- Infissi.
+- Oscuranti.
+- Porte e sicurezza.
+- Porte interne.
+- Atelier Gibus.
+
+### Contatti
+
+- Località.
+- Telefono.
+- Email.
+- WhatsApp.
+- Social.
+
+## Parte inferiore
+
+Una linea divisoria sottile e un'ultima riga con:
+
+- Copyright con anno dinamico.
+- Ragione sociale e Partita IVA, quando confermate.
+- Privacy Policy.
+- Cookie Policy.
+- Eventuali altri collegamenti legali necessari.
+
+Non inventare dati fiscali o societari.
+
+## Animazioni
+
+Nel footer voglio un'entrata sobria degli elementi durante lo scroll.
+
+Nessun effetto eccessivo.
+
+Su smartphone le colonne devono diventare blocchi verticali ordinati, con testi facilmente cliccabili.
+
+---
+
+# 14. Strategia generale delle animazioni
+
+Voglio che **tutto il sito abbia un sistema di animazioni coerente e raffinato**.
+
+Non voglio una pagina statica in cui ogni sezione compare senza vita.
+
+Ma non voglio neppure che ogni elemento salti o si muova inutilmente.
+
+Utilizza principalmente:
+
+- Fade-in progressivi.
+- Traslazioni verticali leggere.
+- Stagger dei componenti.
+- Reveal delle fotografie.
+- Piccole transizioni di scala.
+- Micro-interazioni su hover e focus.
+- Caroselli con movimento fluido.
+
+Ogni sezione deve avere una sua identità di movimento, ma tutte devono appartenere allo stesso sistema.
+
+## Regole
+
+- Evita movimenti bruschi.
+- Evita bounce.
+- Evita scroll-jacking.
+- Evita effetti eccessivi.
+- Non rallentare la navigazione per mostrare le animazioni.
+- Non far rianimare continuamente gli elementi a ogni piccolo movimento.
+- Mantieni lo scroll nativo.
+- Rispetta `prefers-reduced-motion`.
+
+Centralizza durate, easing e distanze in una configurazione riutilizzabile.
+
+Valuta GSAP Context per gestire correttamente cleanup e lifecycle in React.
+
+Non creare un'istanza ScrollTrigger indipendente per ogni piccolo elemento quando non serve.
+
+---
+
+# 15. Responsive — Priorità assoluta
+
+**Il sito deve essere progettato mobile-first.**
+
+Voglio che funzioni perfettamente almeno su:
+
+- Smartphone piccoli.
+- iPhone moderni.
+- Smartphone Android.
+- Tablet.
+- Laptop.
+- Monitor desktop.
+- Schermi larghi.
+
+Non utilizzare dimensioni fisse che causano overflow.
+
+Usa layout fluidi, Grid e Flexbox.
+
+Utilizza `clamp()` dove appropriato per tipografia e spaziature.
+
+Tieni conto delle safe area dei dispositivi mobili.
+
+## Qualità mobile
+
+Su smartphone voglio:
+
+- Logo perfettamente proporzionato.
+- Tipografia chiara.
+- Immagini ritagliate bene.
+- Card di dimensioni corrette.
+- Animazioni fluide.
+- Touch target comodi.
+- Nessun testo tagliato.
+- Nessun bottone sovrapposto.
+- Nessuno scroll orizzontale accidentale.
+- Tempi di caricamento contenuti.
+
+Le animazioni iniziali non devono causare layout shift.
+
+L'utente deve poter navigare il sito anche se JavaScript per le animazioni non funziona.
+
+Se necessario, utilizza varianti di comportamento diverse tra desktop e mobile, ma mantieni la stessa identità grafica.
+
+---
+
+# 16. Performance
+
+La homepage avrà molte immagini, animazioni e caroselli.
+
+Di conseguenza la performance è fondamentale.
+
+Voglio che tu implementi:
+
+- Lazy loading delle immagini fuori dallo schermo.
+- Priorità di caricamento degli asset critici della hero.
+- Dimensioni intrinseche per evitare layout shift.
+- Formati WebP o AVIF quando opportuno.
+- Responsive images con `srcSet` e `sizes`, dove applicabili.
+- Ottimizzazione dei font.
+- Gestione efficiente delle animazioni.
+- Prevenzione di re-render inutili.
+- Cleanup degli observer e dei listener.
+- Caricamento ragionevole dei caroselli.
+
+Evita di generare asset enormi quando non servono.
+
+Non sacrificare il realismo delle immagini, ma trova un buon equilibrio fra qualità e peso.
+
+Esegui verifiche Lighthouse quando disponibili, soprattutto su mobile.
+
+Non dichiarare punteggi o prestazioni che non hai realmente misurato.
+
+---
+
+# 17. Fotografie e asset provvisori
+
+Per il momento le fotografie non sono definitive.
+
+Voglio immagini coerenti con le categorie e con il design del sito.
+
+**Se disponi di uno strumento di generazione immagini, utilizzalo per produrre fotografie dimostrative appropriate.**
+
+Se non puoi generare immagini, utilizza asset provvisori provenienti da fonti che ne consentano l'utilizzo, verificandone la licenza.
+
+Evita hotlink fragili.
+
+Salva gli asset localmente nel progetto e organizzali per categoria.
+
+Non inventare autorizzazioni di utilizzo.
+
+Non riutilizzare fotografie di altre aziende spacciandole per realizzazioni LGE.
+
+Prepara nomi file ordinati e una struttura che permetta di sostituire facilmente tutte le fotografie in seguito.
+
+Non considerare le immagini dei riferimenti grafici come un catalogo definitivo di prodotti.
+
+---
+
+# 18. Testi
+
+Per adesso, tutti i testi descrittivi devono essere provvisori.
+
+Utilizza Lorem ipsum, mantenendo però i titoli principali definiti.
+
+I titoli da rispettare sono:
+
+- DESIGN
+- TUO
+- BENESSERE
+- I nostri prodotti
+- I nostri partner
+- Qualità certificata, risultati concreti
+- I nostri lavori
+- Dicono di noi
+- Parliamo del tuo progetto
+
+Non inventare una storia aziendale dettagliata.
+
+Non inventare recensioni, qualifiche, partnership o certificazioni presentandole come reali.
+
+Mantieni i testi provvisori centralizzati e facili da sostituire.
+
+---
+
+# 19. Componenti e riutilizzo
+
+Non voglio codice duplicato.
+
+Prevedi componenti riutilizzabili come:
+
+- Container
+- SectionHeading
+- AnimatedReveal
+- ImageCard
+- ProductCard
+- PartnerLogo
+- CertificationCard
+- ReviewCard
+- Button
+- TextLink
+- Carousel
+- SocialLink
+
+Questi sono esempi, non un obbligo a creare componenti astratti inutili.
+
+Ogni componente deve avere uno scopo concreto.
+
+Separare responsabilità è importante, ma evita un'eccessiva frammentazione.
+
+Anche i contenuti dovrebbero essere definiti in dataset tipizzati.
+
+Ad esempio:
+
+- `products.data.ts`
+- `partners.data.ts`
+- `certifications.data.ts`
+- `gallery.data.ts`
+- `reviews.data.ts`
+- `contacts.config.ts`
+
+Tutte le interfacce e i type alias dedicati devono essere organizzati in `src/types`.
+
+---
+
+# 20. Cosa NON devi realizzare adesso
+
+Per il momento non sviluppare:
+
+- Pagine prodotto complete.
+- Pagina Chi siamo.
+- Pagina Gibus dedicata.
+- Pagina Realizzazioni completa.
+- Area riservata.
+- Backend amministrativo.
+- CMS.
+- E-commerce.
+- Sistema di preventivazione complesso.
+- Animazioni 3D Blender.
+- Landing page pubblicitarie.
+- Modali o funzionalità aggiuntive non richieste.
+
+Voglio concentrarmi sulla homepage.
+
+Tutte le altre pagine devono rimanere semplici placeholder bianchi dove necessario.
+
+Non anticipare funzionalità future.
+
+---
+
+# 21. Ordine delle sezioni
+
+L'ordine della homepage deve essere esattamente questo:
+
+1. Hero con logo animato e tre sezioni DESIGN / TUO / BENESSERE.
+2. I nostri prodotti.
+3. I nostri partner.
+4. Qualità certificata, risultati concreti.
+5. I nostri lavori.
+6. Dicono di noi.
+7. Contatti con mappa.
+8. Footer.
+
+Non cambiare quest'ordine senza chiedermelo.
+
+---
+
+# 22. Modalità operativa
+
+Voglio che tu lavori concretamente, non che ti limiti a descrivere cosa faresti.
+
+Procedi in questo ordine.
+
+## Prima fase — Analisi
+
+Controlla il repository e gli asset.
+
+Verifica la presenza del logo e delle immagini disponibili.
+
+Definisci una struttura pulita.
+
+## Seconda fase — Setup
+
+Prepara React, TypeScript, routing, CSS Modules e design token, riutilizzando quanto già presente.
+
+## Terza fase — Hero
+
+Questa è la priorità principale.
+
+Realizza e verifica:
+
+- Entrata iniziale del logo.
+- Transizione verso l'alto.
+- Comparsa dei testi.
+- Entrata delle tre sezioni fotografiche.
+- Responsive.
+- Animazioni e hover.
+
+**Non iniziare a rifinire le sezioni successive finché la hero non risulta ben costruita e funzionante.**
+
+## Quarta fase — Resto della homepage
+
+Realizza tutte le altre sezioni nell'ordine definito.
+
+## Quinta fase — Rifinitura
+
+Controlla tipografia, spaziature, immagini, animazioni, responsive e coerenza grafica.
+
+## Sesta fase — Testing
+
+Esegui:
+
+- TypeScript typecheck.
+- Build.
+- Controllo degli errori.
+- Verifica desktop.
+- Verifica smartphone.
+- Verifica tablet.
+- Controllo overflow.
+- Controllo accessibilità.
+- Controllo `prefers-reduced-motion`.
+- Controllo caricamento immagini.
+- Controllo delle animazioni e dei caroselli.
+
+Se puoi usare un browser automatizzato, verifica realmente il risultato e non limitarti a supporre che funzioni.
+
+Non considerare completato il sito soltanto perché la build termina senza errori.
+
+---
+
+# 23. Risultato atteso
+
+Voglio poter avviare il progetto localmente e vedere una homepage completa, raffinata e fluida.
+
+Al primo accesso:
+
+1. Sfondo bianco caldo.
+2. Logo LGE originale al centro.
+3. Breve attesa collegata alla preparazione della prima schermata.
+4. Logo che si sposta fluidamente verso l'alto, al centro.
+5. Comparsa del breve testo introduttivo.
+6. Apparizione sfalsata delle tre sezioni DESIGN, TUO e BENESSERE.
+7. Scroll naturale verso i nostri prodotti.
+8. Successive sezioni animate in modo elegante.
+9. Carosello lavori con movimento automatico.
+10. Recensioni Google dimostrative.
+11. Contatti con mappa.
+12. Footer scuro con logo chiaro.
+
+La versione desktop deve essere molto bella.
+
+**La versione mobile deve essere altrettanto curata, fluida, leggibile e visivamente coinvolgente.**
+
+Prima di concludere, verifica davvero il comportamento su viewport differenti.
+
+## Ultima indicazione
+
+Non voglio un sito pieno di effetti.
+
+Voglio un sito dove ogni dettaglio è pensato.
+
+**Eleganza, semplicità, proporzioni, qualità delle immagini e fluidità delle animazioni vengono prima della quantità di funzionalità.**
+
+Realizza il miglior risultato possibile senza sacrificare pulizia del codice, accessibilità e prestazioni.
+
+Al termine riportami:
+
+- Cosa hai implementato.
+- Struttura del progetto.
+- Come avviarlo.
+- Quali fotografie sono provvisorie.
+- Quali informazioni aziendali mancano.
+- Quali controlli responsive hai realmente eseguito.
+- Eventuali punti da migliorare prima della pubblicazione.
+
+Procedi con lo sviluppo della homepage.

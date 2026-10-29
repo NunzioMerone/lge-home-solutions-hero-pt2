@@ -1,0 +1,92 @@
+.page {
+  background: var(--color-paper);
+}
+.main {
+  width: min(100%, 880px);
+  margin-inline: auto;
+  padding: calc(var(--navigation-height) + clamp(42px, 6vw, 88px)) var(--gutter)
+    var(--section-space);
+  outline: none;
+  animation: enter 850ms var(--ease-out) both;
+}
+.heading {
+  margin-bottom: 36px;
+}
+.heading h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+.intro {
+  max-width: 34em;
+  margin: 0;
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  line-height: 1.7;
+}
+.updated {
+  margin: 22px 0 0;
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.content {
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.content section + section {
+  margin-top: 40px;
+}
+.content h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.65rem, 2.5vw, 2rem);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+.content p {
+  margin: 0 0 16px;
+}
+.hostingNotice {
+  padding-left: 18px;
+  border-left: 2px solid var(--color-blue);
+  color: var(--color-muted);
+}
+.content ul {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+.content li + li {
+  margin-top: 14px;
+}
+.content strong {
+  font-weight: 500;
+  color: var(--color-heading);
+}
+.content a {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.content a:hover {
+  text-decoration-thickness: 2px;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 700px) {
+  .main {
+    padding-inline: 48px;
+  }
+  .content {
+    font-size: 1rem;
+  }
+}

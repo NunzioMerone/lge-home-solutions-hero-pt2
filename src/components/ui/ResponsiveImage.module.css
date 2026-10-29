@@ -1,0 +1,10 @@
+.fallback {
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+  padding: 24px;
+  color: var(--color-muted);
+  background: var(--color-greige);
+  font-size: 0.8rem;
+  text-align: center;
+}

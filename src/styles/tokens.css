@@ -1,0 +1,41 @@
+:root {
+  --color-brand-blue: #014380;
+  --color-blue: var(--color-brand-blue);
+  --color-muted: #6b6b6b;
+  --color-ink: #2f343a;
+  --color-heading: #252a30;
+  --color-paper: #fcfcfb;
+  --color-greige: #ede9e3;
+  --color-sky: #e8f0f8;
+  --color-white: #fff;
+  --color-line: #dcd8d1;
+  --font-sans: 'DM Sans Variable', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-size-section-title: clamp(1.85rem, 2.7vw, 2.75rem);
+  --font-size-card-title: clamp(1.5rem, 1.8vw, 1.85rem);
+  --page-width: 1660px;
+  --navigation-height: 96px;
+  --navigation-compact-height: 76px;
+  --navigation-logo-width: clamp(164px, 50vw, 208px);
+  --navigation-compact-logo-width: clamp(156px, 46vw, 192px);
+  --gutter: max(clamp(20px, 4.45vw, 80px), env(safe-area-inset-left), env(safe-area-inset-right));
+  --section-space: clamp(48px, 5.5vw, 80px);
+  --section-heading-gap: clamp(32px, 3.6vw, 52px);
+  --radius: 3px;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --transition: 250ms var(--ease-out);
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+}
+@media (min-width: 900px) {
+  :root {
+    --navigation-height: 112px;
+    --navigation-compact-height: 88px;
+    --navigation-logo-width: clamp(232px, 22vw, 272px);
+    --navigation-compact-logo-width: clamp(208px, 20vw, 244px);
+  }
+}

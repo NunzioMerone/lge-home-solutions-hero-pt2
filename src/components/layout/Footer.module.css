@@ -1,0 +1,224 @@
+.footer {
+  --footer-text: #c6cbd1;
+
+  padding: 36px 0 max(24px, env(safe-area-inset-bottom));
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-areas: 'identity identity' 'products navigation';
+  align-items: start;
+  gap: 34px 24px;
+  padding-bottom: 30px;
+}
+.identity {
+  grid-area: identity;
+  min-width: 0;
+}
+.brand {
+  position: relative;
+  display: block;
+  width: min(142px, 100%);
+  aspect-ratio: 701 / 708;
+  overflow: hidden;
+}
+.brand img {
+  /* Fit the artwork while preserving the original PNG and its proportions. */
+  position: absolute;
+  left: -21.398%;
+  top: -18.22%;
+  width: 142.653%;
+  max-width: none;
+  height: auto;
+}
+.contact {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+  font-style: normal;
+}
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  font-size: 0.8125rem;
+}
+.contactIcon,
+.socialIcon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 6%);
+  color: #dce5ee;
+}
+.contactIcon svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 1.35;
+}
+.contactRow > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.products {
+  grid-area: products;
+}
+.navigation {
+  grid-area: navigation;
+}
+.products,
+.navigation {
+  display: grid;
+}
+.products h2,
+.navigation h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+.products a,
+.navigation a {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  font-size: 0.875rem;
+}
+.products a,
+.navigation a,
+.contactRow {
+  color: var(--footer-text);
+  line-height: 1.65;
+  transition: color var(--transition);
+}
+.products a:hover,
+.navigation a:hover,
+.contactRow:hover {
+  color: var(--color-white);
+}
+.bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: 'legal socials' 'copyright copyright';
+  align-items: center;
+  gap: 14px 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgb(255 255 255 / 18%);
+  color: var(--footer-text);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+.copyright {
+  grid-area: copyright;
+}
+.legal {
+  grid-area: legal;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  width: fit-content;
+  text-underline-offset: 4px;
+}
+.legal:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+.socials {
+  grid-area: socials;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.socialIcon {
+  width: 44px;
+  height: 44px;
+}
+.socialIcon svg,
+.socialIcon img {
+  width: 23px;
+  height: 23px;
+}
+a.socialIcon {
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+a.socialIcon:hover {
+  background: rgb(255 255 255 / 12%);
+  color: var(--color-white);
+}
+.footer a:focus-visible {
+  outline-color: var(--color-white);
+}
+.fiscal {
+  margin: 12px 0 0;
+  color: var(--footer-text);
+  font-size: 0.6875rem;
+}
+@media (min-width: 600px) and (max-width: 999px) {
+  .identity {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 32px;
+  }
+  .brand {
+    width: min(152px, 100%);
+  }
+  .contact {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .footer {
+    padding-top: 48px;
+  }
+  .main {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 0.8fr);
+    grid-template-areas: 'identity products navigation';
+    gap: clamp(48px, 5vw, 80px);
+    padding-bottom: 30px;
+  }
+  .brand {
+    width: min(162px, 100%);
+  }
+  .contact {
+    margin-top: 24px;
+  }
+  .contactRow {
+    gap: 18px;
+    font-size: 0.875rem;
+  }
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .products,
+  .navigation {
+    padding-top: 10px;
+  }
+  .products h2,
+  .navigation h2 {
+    font-size: 1.0625rem;
+  }
+  .products a,
+  .navigation a {
+    min-height: 40px;
+    font-size: 0.9375rem;
+  }
+  .bottom {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: 'copyright legal socials';
+    column-gap: 28px;
+  }
+}

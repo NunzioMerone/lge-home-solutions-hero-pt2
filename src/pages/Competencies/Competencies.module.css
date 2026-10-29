@@ -1,0 +1,378 @@
+.page {
+  background: var(--color-paper);
+}
+.main {
+  outline: none;
+  padding-top: var(--navigation-height);
+}
+.intro {
+  padding-top: clamp(36px, 5vw, 68px);
+  padding-bottom: 42px;
+  animation: enter 900ms var(--ease-out) both;
+}
+.heading {
+  max-width: 1120px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+.heading h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4.6vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.heading em,
+.sectionTitle em {
+  color: var(--color-blue);
+  font-weight: inherit;
+}
+.heading p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: clamp(0.9375rem, 1.3vw, 1.125rem);
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+.anchors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 2px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-blue);
+}
+.anchors a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  text-underline-offset: 5px;
+}
+.anchors a:hover {
+  text-decoration: underline;
+}
+.sectionTitle {
+  margin: 0 0 var(--section-heading-gap);
+  font-size: var(--font-size-section-title);
+  line-height: 1.12;
+  text-align: center;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.qualifications {
+  padding-top: 30px;
+  border-top: 1px solid rgb(47 52 58 / 5%);
+}
+.qualifications > :first-child .sectionTitle {
+  margin-bottom: 22px;
+}
+.qualification {
+  padding-block: 34px;
+}
+.qualification:nth-of-type(even) {
+  background: var(--color-greige);
+}
+.qualificationInner {
+  display: grid;
+  gap: 26px;
+}
+.credentialCopy {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+}
+.credentialIcon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  color: var(--color-blue);
+  margin-top: 2px;
+}
+.credentialIcon svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.15;
+}
+.credentialCopy h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.65rem, 2.5vw, 2.2rem);
+  text-wrap: balance;
+}
+.label {
+  margin: 0 0 10px;
+  color: var(--color-blue);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.65;
+}
+.description {
+  max-width: 40em;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+.description p {
+  margin: 0;
+}
+.description p + p {
+  margin-top: 14px;
+}
+.documentsBlock {
+  min-width: 0;
+}
+.documents {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.document {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  text-align: left;
+}
+.documentImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: clamp(174px, 40vw, 240px);
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid rgb(47 52 58 / 9%);
+  border-radius: 5px;
+  background: #f5f4f1;
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+.documentImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 8%));
+  transition: transform 700ms var(--ease-out);
+  will-change: auto;
+}
+.documentFormat {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  color: var(--color-blue);
+  background: var(--color-white);
+  font-size: 0.56rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.documentHolder {
+  margin-top: 11px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+.documentLink {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  color: var(--color-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.documentLink svg {
+  width: 13px;
+  height: 13px;
+}
+.document:hover .documentImage,
+.document:focus-visible .documentImage {
+  border-color: rgb(1 67 128 / 40%);
+  box-shadow: 0 5px 18px rgb(47 52 58 / 5%);
+}
+.document:focus-visible .documentImage img {
+  transform: scale(1.035);
+}
+@media (hover: hover) and (pointer: fine) {
+  .document:hover .documentImage img {
+    transform: scale(1.035);
+  }
+}
+.groupCaption {
+  margin: 7px 0 0;
+  color: var(--color-muted);
+  font-size: 0.6875rem;
+  line-height: 1.6;
+}
+.recognitions {
+  padding-block: var(--section-space);
+  background: var(--color-greige);
+}
+.recognitionGrid {
+  display: grid;
+  gap: 14px;
+}
+.recognition {
+  min-width: 0;
+  padding: 24px 20px;
+  border-radius: 5px;
+  background: var(--color-paper);
+}
+.recognition .credentialCopy h3 {
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+}
+.recognition .description {
+  font-size: 0.8125rem;
+}
+.featured {
+  display: grid;
+  gap: 24px;
+}
+.recognitionDocument {
+  width: min(100%, 280px);
+  margin-inline: auto;
+}
+.recognitionDocument .documentImage {
+  height: 230px;
+}
+.contact {
+  padding-block: var(--section-space);
+  text-align: center;
+}
+.contact .sectionTitle {
+  margin-bottom: 18px;
+}
+.contact p {
+  max-width: 620px;
+  margin: 0 auto 24px;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition:
+    background var(--transition),
+    box-shadow var(--transition);
+}
+.contactButton:hover {
+  background: #033667;
+  box-shadow: 0 4px 14px rgb(1 67 128 / 14%);
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 700px) {
+  .intro {
+    padding-bottom: 54px;
+  }
+  .heading {
+    margin-bottom: 30px;
+  }
+  .anchors a + a {
+    position: relative;
+  }
+  .anchors a + a::before {
+    position: absolute;
+    left: -13px;
+    width: 1px;
+    height: 13px;
+    background: var(--color-line);
+    content: '';
+  }
+  .qualification {
+    padding-block: 36px;
+  }
+  .qualificationInner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+  }
+  .credentialCopy {
+    gap: 22px;
+  }
+  .credentialIcon {
+    flex-basis: 46px;
+  }
+  .credentialIcon svg {
+    width: 42px;
+    height: 42px;
+  }
+  .documentImage {
+    height: 190px;
+  }
+  .recognitionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .recognition {
+    padding: 32px;
+  }
+  .featured {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.62fr);
+    align-items: center;
+    column-gap: 48px;
+  }
+}
+@media (min-width: 1100px) {
+  .qualificationInner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    column-gap: 64px;
+  }
+  .qualifications {
+    padding-top: 42px;
+  }
+  .credentialIcon {
+    flex-basis: 60px;
+  }
+  .credentialIcon svg {
+    width: 48px;
+    height: 48px;
+  }
+  .description {
+    font-size: 0.9375rem;
+  }
+  .documentImage {
+    height: 230px;
+  }
+  .documentHolder {
+    font-size: 0.8125rem;
+  }
+  .recognition {
+    padding: 36px 40px;
+  }
+  .featured {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  }
+}

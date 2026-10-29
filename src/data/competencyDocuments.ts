@@ -1,0 +1,115 @@
+import type { CompetencyDocumentGroup } from '../types/competencyDocuments'
+import { assetUrl } from '../utils/assetUrl'
+
+const documentUrl = (file: string) => assetUrl(`documents/competencies/${file}`)
+
+export const competencyDocumentGroups: CompetencyDocumentGroup[] = [
+  {
+    credentialId: 'qualified-installation',
+    caption: 'Certificati DEKRA · Installatore / posatore di serramenti senior',
+    documents: [
+      {
+        id: 'installation-emanuele',
+        title: 'Posa qualificata',
+        holder: 'Emanuele Schiano Lomoriello',
+        caption: 'Installatore / posatore senior · UNI 11673-2',
+        preview: documentUrl('installation-emanuele.webp'),
+        thumbnail: documentUrl('installation-emanuele-thumb.webp'),
+        original: documentUrl('installation-emanuele.webp'),
+        format: 'image',
+        width: 1055,
+        height: 1491,
+      },
+      {
+        id: 'installation-gionatan',
+        title: 'Posa qualificata',
+        holder: 'Gionatan Vito Schiano Lomoriello',
+        caption: 'Installatore / posatore senior · UNI 11673-2',
+        preview: documentUrl('installation-gionatan.webp'),
+        thumbnail: documentUrl('installation-gionatan-thumb.webp'),
+        original: documentUrl('installation-gionatan.webp'),
+        format: 'image',
+        width: 1055,
+        height: 1491,
+      },
+    ],
+  },
+  {
+    credentialId: 'posaclima',
+    caption: 'Attestati di formazione professionale PosaClima',
+    documents: [
+      {
+        id: 'posaclima-emanuele',
+        title: 'Formazione PosaClima',
+        holder: 'Emanuele Schiano Lomoriello',
+        caption: 'Posa e riqualificazione del foro finestra · UNI 11673-3',
+        preview: documentUrl('posaclima-emanuele.webp'),
+        thumbnail: documentUrl('posaclima-emanuele-thumb.webp'),
+        original: documentUrl('posaclima-emanuele.webp'),
+        format: 'image',
+        width: 1448,
+        height: 1086,
+      },
+      {
+        id: 'posaclima-gionatan',
+        title: 'Formazione PosaClima',
+        holder: 'Gionatan Schiano Lomoriello',
+        caption: 'Posa e riqualificazione del foro finestra · UNI 11673-3',
+        preview: documentUrl('posaclima-gionatan.webp'),
+        thumbnail: documentUrl('posaclima-gionatan-thumb.webp'),
+        original: documentUrl('posaclima-gionatan.webp'),
+        format: 'image',
+        width: 1448,
+        height: 1086,
+      },
+    ],
+  },
+  {
+    credentialId: 'thermography',
+    caption: 'Certificati Infrared Training Center · Category 1 Thermographer',
+    documents: [
+      {
+        id: 'thermography-emanuele',
+        title: 'Termografia · I livello',
+        holder: 'Emanuele Schiano Lomoriello',
+        caption: 'Infrared Training Center · Category 1 Thermographer',
+        preview: documentUrl('thermography-emanuele.webp'),
+        thumbnail: documentUrl('thermography-emanuele-preview.webp'),
+        original: documentUrl('thermography-emanuele.pdf'),
+        format: 'pdf',
+        width: 1556,
+        height: 2200,
+      },
+      {
+        id: 'thermography-gionatan',
+        title: 'Termografia · I livello',
+        holder: 'Gionatan Schiano Lomoriello',
+        caption: 'Infrared Training Center · Category 1 Thermographer',
+        preview: documentUrl('thermography-gionatan.webp'),
+        thumbnail: documentUrl('thermography-gionatan-preview.webp'),
+        original: documentUrl('thermography-gionatan.pdf'),
+        format: 'pdf',
+        width: 1556,
+        height: 2200,
+      },
+    ],
+  },
+  {
+    credentialId: 'cosmet',
+    caption: 'Il riconoscimento ricevuto da LGE',
+    documents: [
+      {
+        id: 'cosmet-top-partner',
+        title: 'Cosmet Group · Top Partner 2025',
+        holder: 'LGE Home Solutions',
+        caption: 'Riconoscimento Top Partner · 13 marzo 2025',
+        preview: documentUrl('cosmet-top-partner.webp'),
+        thumbnail: documentUrl('cosmet-top-partner-thumb.webp'),
+        original: documentUrl('cosmet-top-partner.webp'),
+        format: 'image',
+        width: 1254,
+        height: 1254,
+      },
+    ],
+  },
+]

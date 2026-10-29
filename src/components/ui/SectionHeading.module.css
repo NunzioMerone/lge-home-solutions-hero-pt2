@@ -1,0 +1,25 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: clamp(34px, 3.5vw, 42px);
+}
+.heading h2 {
+  margin: 0;
+  font-size: var(--font-size-section-title);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+.details {
+  max-width: 490px;
+}
+.line {
+  display: block;
+  width: 52px;
+  height: 1px;
+  background: var(--color-blue);
+  transform-origin: center;
+}

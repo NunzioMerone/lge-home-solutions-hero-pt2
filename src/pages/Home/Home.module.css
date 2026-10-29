@@ -1,0 +1,4 @@
+.home {
+  /* Entrance transforms must not create a horizontal page scrollbar. */
+  overflow-x: clip;
+}

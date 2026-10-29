@@ -1,0 +1,224 @@
+.carousel {
+  --slide-gap: 18px;
+}
+.interactionArea {
+  min-width: 0;
+}
+.viewport {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.track {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(-1 * var(--slide-gap));
+}
+.slide {
+  flex: 0 0 86%;
+  min-width: 0;
+  padding-left: var(--slide-gap);
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 25px;
+  min-height: 44px;
+}
+.counter {
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  font-variant-numeric: tabular-nums;
+}
+.counter span {
+  color: var(--color-muted);
+}
+.arrows {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+.pagination {
+  display: none;
+}
+.arrowButton {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+.arrowButton svg {
+  width: 18px;
+  height: 18px;
+}
+.arrowButton:hover:not(:disabled) {
+  background: var(--color-sky);
+  border-color: var(--color-blue);
+}
+.arrowButton:disabled {
+  opacity: 0.35;
+}
+.playback {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  padding: 0 10px;
+}
+.playback svg {
+  width: 14px;
+  height: 14px;
+}
+.playback:disabled {
+  opacity: 0.65;
+}
+.reviews {
+  position: relative;
+  --slide-gap: 32px;
+}
+.reviews .interactionArea {
+  margin-inline: 34px;
+}
+.reviews .viewport {
+  border-radius: 0;
+}
+.reviews .controls {
+  min-height: 0;
+  margin: 0;
+}
+.reviews .counter {
+  display: none;
+}
+.reviews .arrows {
+  display: contents;
+}
+.reviews .arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: var(--color-white);
+  box-shadow: 0 2px 10px rgb(28 36 42 / 3%);
+}
+.reviews .arrowButton:first-child {
+  left: -10px;
+}
+.reviews .arrowButton:last-child {
+  right: -10px;
+}
+@media (max-width: 699px) {
+  .products .interactionArea {
+    margin-inline: calc(-1 * var(--gutter));
+  }
+  .products .viewport {
+    border-radius: 0;
+  }
+  .products .track {
+    margin-left: 0;
+    gap: var(--slide-gap);
+  }
+  .products .slide {
+    flex-basis: 78%;
+    max-width: 360px;
+    padding-left: 0;
+    opacity: 0.62;
+    transition: opacity 450ms var(--ease-out);
+  }
+  .products .slide[data-active='true'],
+  .products .slide:focus-within {
+    opacity: 1;
+  }
+  .products .controls {
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .products .counter {
+    display: none;
+  }
+  .products .arrows {
+    justify-content: center;
+    gap: 12px;
+    margin-left: 0;
+  }
+  .products .arrowButton {
+    border-color: transparent;
+    background: rgb(255 255 255 / 85%);
+    box-shadow: 0 3px 12px rgb(28 36 42 / 4%);
+  }
+  .products .arrowButton:active:not(:disabled) {
+    background: var(--color-sky);
+  }
+  .products .pagination {
+    display: flex;
+    align-items: center;
+  }
+  .pagination button {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  .pagination button > span {
+    width: 5px;
+    height: 5px;
+    border-radius: 20px;
+    background: #b8bec5;
+    transition:
+      width 300ms var(--ease-out),
+      background 300ms;
+  }
+  .pagination button[aria-current='true'] > span {
+    width: 20px;
+    background: var(--color-blue);
+  }
+}
+@media (min-width: 600px) {
+  .slide {
+    flex-basis: 46%;
+  }
+}
+@media (min-width: 1100px) {
+  .carousel {
+    --slide-gap: 22px;
+  }
+  .products .slide {
+    flex-basis: 20%;
+  }
+  .products .controls {
+    display: none;
+  }
+  .reviews .slide {
+    flex-basis: 33.333%;
+  }
+}
+@media (min-width: 1400px) {
+  .reviews .slide {
+    flex-basis: 25%;
+  }
+}
+@media (min-width: 1700px) {
+  .reviews .slide {
+    flex-basis: 20%;
+  }
+  .reviews:has(.arrowButton:disabled + .arrowButton:disabled) .controls {
+    display: none;
+  }
+}

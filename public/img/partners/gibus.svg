@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107.683" height="30.959" viewBox="0 0 107.683 30.959">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="R" d="M278.788,15.647a.637.637,0,0,0-.686-.639h-.834v2.271h.4v-.964h.172l.7.964h.473l-.734-.994A.651.651,0,0,0,278.788,15.647Zm-.757.3h-.354V15.4h.354c.214,0,.325.095.325.272S278.244,15.942,278.031,15.942Z" transform="translate(-277.268 -15.008)" fill="#eb0000" />
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <path id="cerchio" d="M275.725,12.361a2.15,2.15,0,1,0,2.147,2.153A2.155,2.155,0,0,0,275.725,12.361Zm0,3.886a1.736,1.736,0,1,1,1.738-1.733A1.739,1.739,0,0,1,275.72,16.247Z" transform="translate(-273.579 -12.361)" fill="#eb0000" />
+        </clipPath>
+        <clipPath id="clip-path-3">
+            <path id="S" d="M233,31.845c-.562-.1-1.083-.183-1.535-.28a5.169,5.169,0,0,1-.752-.213c-.06-.022-.12-.047-.226-.1-.045-.021-.089-.043-.132-.066l-.064-.038c-.037-.021-.074-.044-.109-.068l-.067-.049c-.032-.025-.064-.05-.094-.077l-.063-.06c-.028-.028-.054-.058-.08-.089s-.036-.044-.053-.068a1.285,1.285,0,0,1-.074-.122l-.031-.058a1.149,1.149,0,0,1-.046-.134l-.021-.069a1.058,1.058,0,0,1-.025-.229l.011-.063c.032-.6.8-1.079,2.1-1.217l.155-.013c.122-.011.247-.018.377-.023.11,0,.221-.007.353-.007h0a10.985,10.985,0,0,1,6.3,2.132l2.127-4.5a14.825,14.825,0,0,0-8.774-2.762c-6.191,0-9.01,3.58-9.01,6.907,0,5.479,5.021,6.309,8.687,6.916a15.765,15.765,0,0,1,2.635.57c.475.2,1.03.571.971,1.225l-.009.074a1.174,1.174,0,0,1-.051.2l-.032.084a2.107,2.107,0,0,1-.089.193c-.384.615-1.311.9-2.919.9a15.13,15.13,0,0,1-7.824-2.72l-2.142,4.5c2.208,1.969,6.075,3.24,9.87,3.24,5.793,0,9.6-2.7,9.537-6.864C241.808,33.295,236.547,32.447,233,31.845Z" transform="translate(-222.492 -23.68)" fill="#eb0000" />
+        </clipPath>
+        <clipPath id="clip-path-4">
+            <path id="U" d="M178.466,37.98A4.777,4.777,0,0,1,174.5,40.19c-2.531,0-3.713-2.109-3.713-4.978V24.583H164.42V36.351c0,5.737,3.332,9.659,9.027,9.659a7.682,7.682,0,0,0,5.019-2v1.661h6.369V24.583h-6.369Z" transform="translate(-164.419 -24.583)" fill="#eb0000" />
+        </clipPath>
+        <clipPath id="clip-path-5">
+            <path id="B" d="M114.52,9.785a7.365,7.365,0,0,0-4.64,1.6V1.264h-6.369V31.212h6.369V29.551a6.576,6.576,0,0,0,4.717,2c6.243,0,10.129-5.1,10.129-10.882S120.762,9.785,114.52,9.785Zm-1.055,15.757a4.275,4.275,0,0,1-3.585-1.823V17.377a4.232,4.232,0,0,1,3.585-1.772,4.749,4.749,0,0,1,4.85,5.062A4.6,4.6,0,0,1,113.465,25.541Z" transform="translate(-103.511 -1.264)" fill="#eb0000" />
+        </clipPath>
+        <clipPath id="clip-path-6">
+            <path id="I_palino" data-name="I palino" d="M79.589,1.264a3.866,3.866,0,0,0-.684,2.244,3.8,3.8,0,1,0,7.593,0,3.866,3.866,0,0,0-.684-2.244Z" transform="translate(-78.904 -1.264)" fill="#eb0000" />
+        </clipPath>
+        <clipPath id="clip-path-7">
+            <rect id="I" width="6.369" height="21.09" transform="translate(0.001 0)" fill="#eb0000" />
+        </clipPath>
+        <clipPath id="clip-path-8">
+            <path id="G" d="M15.3,19.6h7.217v3.418a9.572,9.572,0,0,1-5.781,1.477,8.62,8.62,0,0,1-8.524-8.819,8.62,8.62,0,0,1,8.524-8.819,8.049,8.049,0,0,1,7.005,3.332l5.106-4.176A14.967,14.967,0,0,0,16.736.354a15.318,15.318,0,0,0,0,30.636c5.064,0,9.368-1.52,12.322-4.9V14.028H17.943Z" transform="translate(-1.418 -0.354)" fill="#eb0000" />
+        </clipPath>
+    </defs>
+    <g id="LOGO" transform="translate(-905 -519.65)">
+        <g id="MASK_R" data-name="MASK R" transform="translate(1009.79 525.217)" clip-path="url(#clip-path)">
+            <rect id="R_R" data-name="R R" width="3.829" height="31.905" transform="translate(-1.418 -5.567)" fill="#eb0000" />
+            <rect id="R_w" data-name="R w" width="3.829" height="31.905" transform="translate(-1.418 -87.243)" fill="#fff" />
+        </g>
+        <g id="MASK_CERCHIO" data-name="MASK CERCHIO" transform="translate(1008.389 524.212)" clip-path="url(#clip-path-2)">
+            <rect id="cerchio_R" data-name="cerchio R" width="4.313" height="31.905" transform="translate(-0.018 -4.561)" fill="#eb0000" />
+            <rect id="cerchio_w" data-name="cerchio w" width="3.829" height="31.905" transform="translate(-0.018 -86.238)" fill="#fff" />
+        </g>
+        <g id="MASK_S" data-name="MASK S" transform="translate(988.982 528.511)" clip-path="url(#clip-path-3)">
+            <rect id="S_R" data-name="S R" width="20.419" height="31.905" transform="translate(-1.029 -8.861)" fill="#eb0000" />
+            <rect id="S_w" data-name="S w" width="20.419" height="31.905" transform="translate(-1.029 -90.537)" fill="#fff" />
+        </g>
+        <g id="MASK_U" data-name="MASK U" transform="translate(966.92 528.854)" clip-path="url(#clip-path-4)">
+            <rect id="U_R" data-name="U R" width="21.695" height="31.905" transform="translate(-0.663 -9.205)" fill="#eb0000" />
+            <rect id="U_w" data-name="U w" width="21.695" height="31.905" transform="translate(-0.663 -80.672)" fill="#fff" />
+        </g>
+        <g id="MASK_B" data-name="MASK B" transform="translate(943.784 519.995)" clip-path="url(#clip-path-5)">
+            <rect id="B_R" data-name="B R" width="22.972" height="31.905" transform="translate(-0.498 -0.345)" fill="#eb0000" />
+            <rect id="B_w" data-name="B w" width="22.972" height="30.629" transform="translate(-0.498 -61.602)" fill="#fff" />
+        </g>
+        <g id="MASK_pallino_I" data-name="MASK pallino I" transform="translate(934.435 519.995)" clip-path="url(#clip-path-6)">
+            <rect id="I_pallino_R" data-name="I pallino R" width="7.657" height="31.905" transform="translate(-0.082 -0.345)" fill="#eb0000" />
+            <rect id="I_pallino_w" data-name="I pallino w" width="7.657" height="31.905" transform="translate(-0.082 -42.46)" fill="#fff" />
+        </g>
+        <g id="MASK_I" data-name="MASK I" transform="translate(935.026 528.854)" clip-path="url(#clip-path-7)">
+            <rect id="I_R" data-name="I R" width="7.657" height="31.905" transform="translate(-0.673 -9.205)" fill="#eb0000" />
+            <rect id="I_w" data-name="I w" width="7.657" height="31.905" transform="translate(-0.673 -51.319)" fill="#fff" />
+        </g>
+        <g id="MASK_G" data-name="MASK G" transform="translate(905 519.65)" clip-path="url(#clip-path-8)">
+            <rect id="G_R" data-name="G R" width="28.076" height="31.905" transform="translate(0 0)" fill="#eb0000" />
+            <rect id="G_w" data-name="G w" width="28.076" height="30.629" transform="translate(0 -31.905)" fill="#fff" />
+        </g>
+    </g>
+</svg>
+  

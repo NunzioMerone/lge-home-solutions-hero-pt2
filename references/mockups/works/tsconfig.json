@@ -1,0 +1,7 @@
+{
+  "extends": "../../../tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "../../../node_modules/.cache/tsconfig.works-mockup.tsbuildinfo"
+  },
+  "include": ["main.tsx"]
+}

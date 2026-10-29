@@ -1,0 +1,26 @@
+.page {
+  background: var(--color-paper);
+}
+.main {
+  display: grid;
+  place-items: center;
+  min-height: 75svh;
+  padding: calc(var(--navigation-height) + 48px) var(--gutter) 80px;
+  text-align: center;
+}
+.content {
+  width: 100%;
+  max-width: 640px;
+}
+.content h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+.content p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  line-height: 1.75;
+}

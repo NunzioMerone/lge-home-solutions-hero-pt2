@@ -1,0 +1,27 @@
+[
+  {
+    "name": "security",
+    "source": "/Users/nunziomerone/.codex/generated_images/01a15e22-6e40-7513-ae95-74680d0cf1a1/exec-ba90db52-a283-44ff-81d4-4a19162f46cb.png",
+    "prompt": "Use case: ads-marketing. Asset: photographic website hero panel for an Italian architectural home solutions brand. Create ONE highly photorealistic architectural editorial photograph, vertical 2:3 composition. A premium oversized graphite security entrance door installed in a contemporary Mediterranean villa, brushed bronze long handle, warm natural travertine wall, one architectural wall light, olive tree leaves at the edge, pale limestone paving. Straight verticals, eye-level architectural camera, door fully visible and centered, ample architecture around it so it can crop to both portrait and square. Late-afternoon warm sun, soft real shadows, finely textured stone, subtle imperfections, rich elegant neutral palette. Shot for a refined architecture magazine. No people, no text, no logos, no collage, no watermark. The architecture must feel built and real, never a simplified 3D render."
+  },
+  {
+    "name": "windows",
+    "source": "/Users/nunziomerone/.codex/generated_images/01a15e22-6e40-7513-ae95-74680d0cf1a1/exec-82ee4cf4-a8b6-4bbd-bac5-45f4de194ae7.png",
+    "prompt": "Use case: ads-marketing. Asset: photographic website hero panel for an Italian home solutions brand. Create ONE highly photorealistic architecture editorial photograph, vertical 2:3 composition. Refined contemporary Mediterranean living room with floor-to-ceiling slim bronze aluminium window frames and a sliding glazed door, opening to a sunlit terrace, blue Mediterranean sea and distant hills. Architectural glazing is the main subject; window frame geometry and glass reflections are realistic and precise. Warm limestone floor, soft ivory linen sofa partly visible at edge, natural oak details, an olive tree outside. Eye-level camera with straight verticals, no exaggerated ultra-wide distortion. Soft warm afternoon sunlight, tactile materials, luminous and quiet luxury. Compose the glazing and horizon centrally so it works as a vertical hero panel or square crop. No people, no typography, no logos, no watermark, no collage."
+  },
+  {
+    "name": "outdoor",
+    "source": "/Users/nunziomerone/.codex/generated_images/01a15e22-6e40-7513-ae95-74680d0cf1a1/exec-f240d702-6fd3-4e2d-bfcc-9d754ca1b856.png",
+    "prompt": "Use case: ads-marketing. Asset: photographic website hero panel for an Italian home solutions brand. Create ONE highly photorealistic architectural editorial photograph, vertical 2:3 composition. An elegant graphite aluminium bioclimatic pergola with credible slim adjustable roof louvers, subtly lit warm integrated LED strips, on a warm travertine terrace attached to a contemporary Mediterranean villa. Under the pergola a cream linen outdoor sofa and low oak table. Olive trees and a glimpse of a calm Mediterranean bay in the background at golden hour. Show the whole pergola from a slightly diagonal eye-level angle, with strong honest architecture and tactile surfaces. Equal importance to structure and comfortable living. Photographic detail in textiles, brushed metal, natural stone and vegetation, advertising photography quality. Rich but natural warm neutral tones. No people, no logos, no text, no watermark, no collage, no artificial cartoon rendering."
+  },
+  {
+    "name": "shading",
+    "source": "/Users/nunziomerone/.codex/generated_images/01a15e22-6e40-7513-ae95-74680d0cf1a1/exec-0290861b-a0e7-44df-bf38-8ac252ed1c06.png",
+    "prompt": "Use case: ads-marketing. Asset: product category photograph for an Italian architectural home solutions website. Create ONE highly photorealistic architecture editorial photo, vertical 2:3 framing. The exterior facade of an elegant contemporary Mediterranean villa with a large slim-framed window shaded by premium horizontal adjustable dark bronze aluminium external venetian blinds. The slats are realistic, straight and uniformly spaced, partially open to filter soft warm sunlight. Warm ivory travertine facade, one potted olive, stone terrace, subtle shadows. Make the window shading system the clear central subject, shown completely, eye-level camera and straight vertical lines. Refined tactile warm neutral palette and natural architectural photography, no people, no text, no logos, no watermark, no collage."
+  },
+  {
+    "name": "interior",
+    "source": "/Users/nunziomerone/.codex/generated_images/01a15e22-6e40-7513-ae95-74680d0cf1a1/exec-7472eb59-6fca-4dd1-b742-4148b6af3f49.png",
+    "prompt": "Use case: ads-marketing. Asset: product category photograph for an Italian architectural home solutions website. Create ONE highly photorealistic architectural editorial photograph, vertical 2:3. An elegant flush oak interior door in a refined warm minimalist Mediterranean home. Door is half open into a luminous room, discreet brushed metal handle, clean believable joinery details, textured ivory plaster wall, light oak parquet, a low stone bench and a sculptural ceramic vessel at the edge. Warm soft natural sunlight, delicate shadows, tactile natural wood grain, understated premium interior magazine photography. Center the door and preserve the whole doorway for vertical and square crops. No people, no text, no logos, no watermark, no collage."
+  }
+]
