@@ -1,4 +1,5 @@
 import { Hero } from '../../components/sections/Hero/Hero'
+import { Solutions } from '../../components/sections/Solutions/Solutions'
 import { Partners } from '../../components/sections/Partners/Partners'
 import { Certifications } from '../../components/sections/Certifications/Certifications'
 import { Gallery } from '../../components/sections/Gallery/Gallery'
@@ -19,6 +20,7 @@ export function Home() {
       <Header />
       <main>
         <Hero />
+        <Solutions />
         <Partners />
         <Certifications />
         <Gallery />

@@ -14,6 +14,12 @@ export function useHeroEntrance() {
       timeline = gsap.timeline({ paused: true })
       timeline
         .fromTo(
+          root.querySelector('[data-hero-eyebrow]'),
+          { opacity: 0, y: 8 },
+          { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' },
+          0,
+        )
+        .fromTo(
           root.querySelector('[data-hero-prefix]'),
           { opacity: 0, y: 10 },
           { opacity: 1, y: 0, duration: 0.95, ease: 'power2.out' },
@@ -26,10 +32,10 @@ export function useHeroEntrance() {
           0.2,
         )
         .fromTo(
-          root.querySelectorAll('[data-hero-slide]'),
-          { opacity: 0, y: 28 },
-          { opacity: 1, y: 0, duration: 1.8, stagger: 0.18, ease: 'power2.out' },
-          0.45,
+          root.querySelector('[data-hero-action]'),
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out' },
+          0.35,
         )
     }, root)
     const reveal = () => {

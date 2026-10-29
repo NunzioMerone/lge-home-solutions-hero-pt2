@@ -4,7 +4,7 @@ import { products } from '../../../data/products'
 import { useCarousel } from '../../../hooks/useCarousel'
 import { HeroProductCard } from './HeroProductCard'
 import { CarouselArrow } from '../../ui/CarouselArrow'
-import styles from './Hero.module.css'
+import styles from './HeroProducts.module.css'
 
 // Keep the carousel independent of the headline's per-character updates.
 export const HeroProductCarousel = memo(function HeroProductCarousel() {
@@ -22,7 +22,6 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
   return (
     <div
       className={styles.carousel}
-      id="prodotti"
       tabIndex={-1}
       role="region"
       aria-roledescription="carosello"
@@ -46,12 +45,12 @@ export const HeroProductCarousel = memo(function HeroProductCarousel() {
               role="group"
               aria-roledescription="diapositiva"
               aria-label={`${index + 1} di ${products.length}`}
-              data-hero-slide
+              data-reveal
             >
               <HeroProductCard
                 product={product}
                 description={heroDescriptions[product.id]}
-                critical={index < 2}
+                critical={false}
               />
             </div>
           ))}

@@ -2,7 +2,7 @@
 
 Copia indipendente autorizzata il 29 ottobre 2026. Per la futura hero alternativa lavorare solo qui, senza modificare `../Sito/`. Repository `NunzioMerone/lge-home-solutions-hero-pt2`, porta locale 5177, GitHub Pages `/lge-home-solutions-hero-pt2/`. Non usare repository o deploy del primo sito.
 
-La copia parte con la stessa hero. Le modifiche visive future riguardano soltanto la hero e gli elementi necessari al suo funzionamento. La demo è pubblica ma non indicizzata: conservare `VITE_PUBLIC_PREVIEW=true`, i metadati noindex e lo stato reale di revisione della Privacy Policy.
+La copia è partita con la stessa hero. Su richiesta del 29 ottobre 2026 usa ora una hero fotografica responsive e una sezione «Le nostre soluzioni» separata, prima dei partner. Le modifiche visive future riguardano soltanto la hero e gli elementi necessari al suo funzionamento. La demo è pubblica ma non indicizzata: conservare `VITE_PUBLIC_PREVIEW=true`, i metadati noindex e lo stato reale di revisione della Privacy Policy.
 
 # LGE Home Solutions — Hero PT2
 

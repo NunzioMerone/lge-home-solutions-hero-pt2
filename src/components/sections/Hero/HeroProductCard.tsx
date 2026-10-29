@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import type { HeroProductCardProps } from '../../../types/hero'
 import { Icon } from '../../ui/Icon'
 import { ResponsiveImage } from '../../ui/ResponsiveImage'
-import styles from './Hero.module.css'
+import styles from './HeroProducts.module.css'
 
 export function HeroProductCard({ product, description, critical }: HeroProductCardProps) {
   return (
@@ -26,7 +26,7 @@ export function HeroProductCard({ product, description, critical }: HeroProductC
       </span>
       <div className={styles.infoPanel}>
         <div className={styles.panelHeading}>
-          <h2>{product.title}</h2>
+          <h3>{product.title}</h3>
           <Icon name="arrow" className={styles.categoryArrow} />
         </div>
         <p id={`hero-description-${product.id}`}>{description}</p>
