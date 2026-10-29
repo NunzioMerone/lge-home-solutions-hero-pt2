@@ -219,24 +219,52 @@
 }
 @media (max-width: 699px) {
   .hero {
+    display: grid;
+    min-height: 100svh;
     overflow: hidden;
-    background: linear-gradient(110deg, #c8af97, #d5bfaa);
+    background: #d0baa4;
   }
   .backdrop {
-    top: 70px;
-    bottom: -70px;
-    mask-image: linear-gradient(180deg, transparent, #000 85px);
+    position: relative;
+    inset: auto;
+    grid-area: 1 / 1;
+    align-self: end;
+    display: block;
+    margin-top: 60px;
+    mask-image: linear-gradient(180deg, transparent, #000 70px);
+  }
+  .backdrop img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+  }
+  .hero::after {
+    background: linear-gradient(
+      180deg,
+      rgb(248 239 225 / 24%),
+      rgb(248 239 225 / 55%) 30%,
+      rgb(248 239 225 / 36%) 43%,
+      transparent 57%
+    );
   }
   .content {
-    padding-top: calc(var(--navigation-height) + 64px + env(safe-area-inset-top));
+    grid-area: 1 / 1;
+    align-self: start;
+    min-height: 0;
+    padding-top: calc(var(--navigation-height) + 34px + env(safe-area-inset-top));
   }
   .eyebrow {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
   .subtitle {
-    margin-top: 26px;
+    margin-top: 22px;
   }
   .whatsapp {
-    margin-top: 30px;
+    margin-top: 22px;
+    padding: 11px 16px;
+    border-radius: 4px;
+    background: var(--color-brand-blue);
+    color: var(--color-white);
+    text-decoration: none;
   }
 }

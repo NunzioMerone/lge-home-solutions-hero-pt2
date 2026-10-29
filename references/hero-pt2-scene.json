@@ -48,6 +48,7 @@
       "bytes": 211286
     }
   ],
-  "mobileSpacingRevision": "User requested lower text and wider spacing; imagegen reframed the clean mobile scene upward to leave a larger light wall behind text and WhatsApp. Previous clean portrait retained for tablets.",
-  "mobileSpacingPrompt": "Reframe the same portrait architecture upward, add more calm cream wall in upper-left, move diagonal glazing lower, retain original garden, pergola, curtains and realistic perspective. Foreground table may be cropped; no text, branding or UI."
+  "mobileSpacingRevision": "Previous experiment, no longer used: extra wall generated for lower text placement. Both generated variants remain archived; only the original clean portrait is loaded.",
+  "mobileSpacingPrompt": "Reframe the same portrait architecture upward, add more calm cream wall in upper-left, move diagonal glazing lower, retain original garden, pergola, curtains and realistic perspective. Foreground table may be cropped; no text, branding or UI.",
+  "currentMobileLayout": "Original clean portrait restored after user feedback. Natural image ratio in document flow; no cover crop or bottom clipping. A 60px top blend integrates the photograph with the warm canvas. Compact typography and solid LGE-blue WhatsApp action; desktop and tablet unchanged."
 }

@@ -15,13 +15,6 @@ export function Hero() {
     <section ref={rootRef} className={styles.hero} id="inizio" aria-labelledby="hero-title">
       <picture className={styles.backdrop} aria-hidden="true">
         <source
-          media="(max-width: 699px)"
-          srcSet={`${assetUrl('img/hero-scene/mobile-spacious-480.webp')} 480w, ${assetUrl('img/hero-scene/mobile-spacious-850.webp')} 850w`}
-          sizes="100vw"
-          width="850"
-          height="1850"
-        />
-        <source
           media="(max-width: 999px)"
           srcSet={`${assetUrl('img/hero-scene/mobile-480.webp')} 480w, ${assetUrl('img/hero-scene/mobile-850.webp')} 850w`}
           sizes="100vw"
