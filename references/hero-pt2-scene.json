@@ -50,5 +50,5 @@
   ],
   "mobileSpacingRevision": "Previous experiment, no longer used: extra wall generated for lower text placement. Both generated variants remain archived; only the original clean portrait is loaded.",
   "mobileSpacingPrompt": "Reframe the same portrait architecture upward, add more calm cream wall in upper-left, move diagonal glazing lower, retain original garden, pergola, curtains and realistic perspective. Foreground table may be cropped; no text, branding or UI.",
-  "currentMobileLayout": "Original clean portrait restored after user feedback. Natural image ratio in document flow; no cover crop or bottom clipping. A 60px top blend integrates the photograph with the warm canvas. Compact typography and solid LGE-blue WhatsApp action; desktop and tablet unchanged."
+  "currentMobileLayout": "2026-10-30: full-viewport portrait hero, complete glazed opening on the right and compact HTML copy on the left vertical wall. A wider architectural view and clearer pergola replace the earlier narrow composition. Current files and exact prompts: references/hero-mobile-room.json. Desktop and tablet unchanged."
 }

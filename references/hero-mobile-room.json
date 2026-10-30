@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-30",
+  "tool": "image_gen.imagegen (built-in)",
+  "intent": "Full-screen portrait hero with complete glazing to the right, readable copy on the left wall, and a wider view of the pergola. Uses the more open of the two compositions after user feedback.",
+  "source": "references/hero-pt2-supplied/desktop-original.png",
+  "intermediate": "references/hero-pt2-supplied/mobile-wall-open.png",
+  "original": "references/hero-pt2-supplied/mobile-room-open.png",
+  "prompts": [
+    "Use case: precise-object-edit.\nAsset type: photorealistic full-viewport mobile website hero background, portrait ratio 850:1850.\nInput image: the supplied warm architectural living room photograph is the edit target and scene identity reference.\nRecompose this SAME room for a tall phone screen. Change the camera/framing, not the design language. The essential request is: a FULL wood-framed floor-to-ceiling sliding glazed opening, all head, sill and both side jambs visibly contained in the composition, with the Mediterranean garden and dark pergola beyond, and a real VERTICAL plaster WALL on the LEFT for HTML headline overlay. The copy must sit on a wall, never on the ceiling.\nComposition: level architectural camera with straight verticals, pulled back and looking obliquely along the left wall toward the glazing, so the entire multi-panel window is foreshortened naturally and fits within the RIGHT half of the portrait. The cream plaster wall occupies about the LEFT 52% of the image throughout the middle 70% of its height, calm and unbroken from roughly y=16% to y=78%. The whole glazing spans approximately x=53% to x=96%, y=17% to y=83%; keep generous safety margins around every edge of the complete window. Glazing is tall and elegant, with credible 3D perspective, not digitally squeezed or stretched. Window header is near the upper fifth of the image, not halfway down. Only a SMALL sliver of ceiling, at most 8% of image height. Some wood floor in lower 15%, optional cropped edge of the same beige sofa at bottom-left, no foreground plant crossing the left text wall.\nKeep the original warm timber, pale linen curtains, cream plaster, sheer glass reflections, sunlit olive garden, and anthracite pergola with timber slats and beige outdoor seating. Keep original golden daylight and photographic material detail. Reduce busy bright leaf reflections on the left wall to a delicate natural shadow, preserving legibility there. Advertising architectural photograph, refined and realistically built, no dramatic wide-angle distortions.\nNo text, no letters, no logo, no icons, no watermark, no UI, no border, no fake blank rectangle. No large ceiling, no upward tilted camera, no cropped window head or sill. The entire complete glazed opening must remain visible within the right side of the finished 850:1850 portrait, and the left copy area must be an actual vertical wall.",
+    "Use case: precise-object-edit. Edit this architectural portrait photograph with one local change in the outdoor garden visible THROUGH the window. Make the anthracite pergola more fully visible and less tightly cropped: its complete roof width and two supporting front posts should be legible inside the glazed opening, rather than the structure extending out of the right image edge. Naturally place it a little farther back in the garden and slightly toward the left within the outdoor view, with realistic perspective, so the full structure fits between roughly x=54% and x=95% of the portrait. Keep it generous and clearly recognizable, not tiny. Preserve dark anthracite metal, timber roof slats, cream outdoor sofa and golden sun. Keep the indoor room, left plaster wall, curtains, ALL timber window geometry/proportions, camera angle, image composition, floor and foreground sofa EXACTLY as supplied. Do not narrow the glazing or widen the wall, do not add ceiling, do not change the aspect ratio 850:1850. No text, logos, UI or watermark. Only refine the outdoor pergola view, with the same photographic realism and natural depth."
+  ],
+  "variants": [
+    {
+      "file": "public/img/hero-scene/mobile-room-480.webp",
+      "width": 480,
+      "height": 1045,
+      "bytes": 101802
+    },
+    {
+      "file": "public/img/hero-scene/mobile-room-850.webp",
+      "width": 850,
+      "height": 1850,
+      "bytes": 241458
+    }
+  ],
+  "status": "Decorative hero composition; not presented as an actual LGE installation."
+}
