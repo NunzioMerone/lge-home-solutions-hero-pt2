@@ -76,29 +76,16 @@
   text-align: left;
   white-space: normal;
 }
-.reserve,
-.live {
+.phrase {
   grid-area: 1 / 1;
   min-width: 0;
-}
-.reserve {
   visibility: hidden;
+  opacity: 0;
   pointer-events: none;
 }
-.cursor {
-  display: inline-block;
-  width: 2px;
-  height: 0.78em;
-  margin-left: 4px;
-  vertical-align: -0.02em;
-  background: currentColor;
-}
-.live .cursor {
-  animation: cursor-blink 1s step-end infinite;
-}
-.cursor[data-paused='true'] {
-  animation: none;
-  opacity: 0.4;
+.phrase:first-child {
+  visibility: visible;
+  opacity: 1;
 }
 .subtitle {
   max-width: 340px;
@@ -131,15 +118,6 @@
 }
 .whatsapp:hover {
   gap: 17px;
-}
-@keyframes cursor-blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
 }
 @media (min-width: 700px) and (max-width: 999px) {
   .hero {

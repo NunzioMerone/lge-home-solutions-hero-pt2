@@ -25,6 +25,11 @@ Il manifest `references/hero-pt2-copy-manifest.json` registra gli hash dei 500 f
 
 ## Hero fotografica
 
-Desktop: prima immagine pulita fornita dall’utente, senza testi raster. Smartphone e tablet: versione verticale originale ricavata dal terzo riferimento tramite lo strumento integrato imagegen, senza testi o loghi incorporati. La variante con più parete resta conservata tra gli esperimenti e non viene più caricata. Titolo e cursore restano HTML, con il blu ufficiale LGE e il corsivo condiviso; WhatsApp apre `https://wa.me/393346008313`.
+Desktop: prima immagine pulita fornita dall’utente, senza testi raster. Smartphone e tablet: versione verticale originale ricavata dal terzo riferimento tramite lo strumento integrato imagegen, senza testi o loghi incorporati. La variante con più parete resta conservata tra gli esperimenti e non viene più caricata. Il titolo resta HTML, con il blu ufficiale LGE e il corsivo condiviso; WhatsApp apre `https://wa.me/393346008313`.
 
 Revisione mobile del 29 ottobre: la fotografia determina l’altezza della hero con la propria proporzione naturale, senza ingrandimenti o tagli tramite cover. Il bordo superiore si raccorda al fondo caldo con 60 px di respiro; divano, pavimento e pergola restano nella scena. Il testo è più compatto e WhatsApp usa un pulsante nel blu ufficiale, leggibile anche sopra la vetrata. Desktop e tablet restano invariati. I titoli delle card sono H3 sotto l’H2 «Le nostre soluzioni»; tutte le card sotto la hero sono differite. Il resto della homepage e le pagine interne non cambiano. Fonti, prompt e dimensioni: `references/hero-pt2-scene.json`; originali e derivati di lavoro in `references/hero-pt2-supplied/`.
+
+
+### Titolo con entrata a fuoco — 30 ottobre 2026
+
+Nel solo PT2 la macchina da scrivere è sostituita da frasi complete: ingresso a fuoco in 1,2 secondi, lettura per 3,2 secondi e uscita sfocata in 0,85 secondi, con una pausa di 0,1 secondi tra le frasi. «Il design che» compare una volta con un leggero effetto di messa a fuoco e poi resta fisso. Nessun cursore; spazio riservato dalla frase più lunga anche su mobile. La timeline GSAP si sospende fuori vista e quando la scheda è nascosta, riprende dallo stesso punto e viene rimossa al cambio pagina. Con movimento ridotto resta visibile la prima frase senza animazione. Foto, CTA e sezioni non cambiano.
