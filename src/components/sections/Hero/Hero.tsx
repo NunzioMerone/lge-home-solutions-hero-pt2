@@ -1,5 +1,6 @@
 import { heroCopy } from '../../../data/hero'
 import { useHeroEntrance } from '../../../hooks/useHeroEntrance'
+import { useMotion } from '../../../hooks/useMotion'
 import { contacts } from '../../../config/contacts'
 import { getContactLinks } from '../../../utils/contactLinks'
 import { assetUrl } from '../../../utils/assetUrl'
@@ -8,6 +9,7 @@ import styles from './Hero.module.css'
 
 export function Hero() {
   const rootRef = useHeroEntrance()
+  const { reducedMotion } = useMotion()
   const links = getContactLinks(contacts)
   return (
     <section ref={rootRef} className={styles.hero} id="inizio" aria-labelledby="hero-title">
@@ -53,10 +55,14 @@ export function Hero() {
               </span>
               <span className={styles.suffixSlot}>
                 {heroCopy.phrases.map((phrase) => (
-                  <span className={styles.phrase} key={phrase} data-hero-phrase>
+                  <span className={styles.reserve} key={phrase}>
                     {phrase}
                   </span>
                 ))}
+                <span className={styles.live} data-hero-live>
+                  <span data-hero-text>{heroCopy.phrases[0]}</span>
+                  {!reducedMotion && <span className={styles.cursor} />}
+                </span>
               </span>
             </span>
           </h1>

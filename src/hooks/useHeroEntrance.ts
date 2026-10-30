@@ -1,7 +1,11 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { heroFocus } from '../config/hero'
+import { TextPlugin } from 'gsap/TextPlugin'
+import { heroHeadlineMotion } from '../config/hero'
+import { heroCopy } from '../data/hero'
 import { useMotion } from './useMotion'
+
+gsap.registerPlugin(TextPlugin)
 
 export function useHeroEntrance() {
   const rootRef = useRef<HTMLElement>(null)
@@ -11,8 +15,10 @@ export function useHeroEntrance() {
     const root = rootRef.current
     if (!root || reducedMotion) return
     const introduction = root.querySelector<HTMLElement>('[data-introduction]')
-    if (!introduction) return
-    const phrases = root.querySelectorAll<HTMLElement>('[data-hero-phrase]')
+    const live = root.querySelector<HTMLElement>('[data-hero-live]')
+    const text = root.querySelector<HTMLElement>('[data-hero-text]')
+    if (!introduction || !live || !text) return
+    const originalText = text.textContent
     let entrance: gsap.core.Timeline | undefined
     let rotation: gsap.core.Timeline | undefined
     const context = gsap.context(() => {
@@ -43,40 +49,41 @@ export function useHeroEntrance() {
           0.35,
         )
 
-      if (phrases.length === 0) return
-      const unfocused = { autoAlpha: 0, filter: `blur(${heroFocus.blur}px)`, y: 6 }
-      gsap.set(phrases, unfocused)
-      rotation = gsap.timeline({
+      gsap.set(text, { text: '' })
+      const headline = gsap.timeline({
         paused: true,
         repeat: -1,
-        delay: heroFocus.initialDelay,
-        repeatDelay: heroFocus.betweenDuration,
+        delay: heroHeadlineMotion.initialDelay,
+        repeatDelay: heroHeadlineMotion.betweenDuration,
       })
-      phrases.forEach((phrase, index) => {
-        rotation
-          ?.fromTo(
-            phrase,
-            unfocused,
+      rotation = headline
+      heroCopy.phrases.forEach((phrase, index) => {
+        headline
+          .set(
+            live,
+            { autoAlpha: 1, filter: 'blur(0px)', y: 0 },
+            index === 0 ? 0 : `+=${heroHeadlineMotion.betweenDuration}`,
+          )
+          .fromTo(
+            text,
+            { text: '' },
             {
-              autoAlpha: 1,
-              filter: 'blur(0px)',
-              y: 0,
-              duration: heroFocus.enterDuration,
-              ease: 'power2.out',
+              text: { value: phrase, delimiter: '' },
+              duration: phrase.length * heroHeadlineMotion.characterDuration,
+              ease: 'none',
               immediateRender: false,
             },
-            index === 0 ? 0 : `+=${heroFocus.betweenDuration}`,
           )
           .to(
-            phrase,
+            live,
             {
               autoAlpha: 0,
-              filter: `blur(${heroFocus.blur}px)`,
+              filter: `blur(${heroHeadlineMotion.blur}px)`,
               y: -4,
-              duration: heroFocus.exitDuration,
+              duration: heroHeadlineMotion.exitDuration,
               ease: 'power2.in',
             },
-            `+=${heroFocus.holdDuration}`,
+            `+=${heroHeadlineMotion.holdDuration}`,
           )
       })
     }, root)
@@ -104,6 +111,7 @@ export function useHeroEntrance() {
       document.removeEventListener('visibilitychange', syncVisibility)
       root.removeEventListener('focusin', revealForKeyboard)
       context.revert()
+      text.textContent = originalText
     }
   }, [reducedMotion])
 

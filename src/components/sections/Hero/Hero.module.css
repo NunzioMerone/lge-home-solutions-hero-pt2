@@ -76,16 +76,40 @@
   text-align: left;
   white-space: normal;
 }
-.phrase {
+.reserve,
+.live {
   grid-area: 1 / 1;
   min-width: 0;
-  visibility: hidden;
-  opacity: 0;
   pointer-events: none;
 }
-.phrase:first-child {
-  visibility: visible;
-  opacity: 1;
+.reserve {
+  visibility: hidden;
+}
+.cursor {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0.78em;
+  vertical-align: -0.02em;
+}
+.cursor::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 3px;
+  width: 1px;
+  background: currentColor;
+}
+.live .cursor {
+  animation: cursor-blink 1s step-end infinite;
+}
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 .subtitle {
   max-width: 340px;

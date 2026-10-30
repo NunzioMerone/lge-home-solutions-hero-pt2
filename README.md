@@ -30,13 +30,18 @@ Desktop: prima immagine pulita fornita dall’utente, senza testi raster. Smartp
 Precedente revisione mobile del 29 ottobre, superata dalla composizione del 30 ottobre: la fotografia determina l’altezza della hero con la propria proporzione naturale, senza ingrandimenti o tagli tramite cover. Il bordo superiore si raccorda al fondo caldo con 60 px di respiro; divano, pavimento e pergola restano nella scena. Il testo è più compatto e WhatsApp usa un pulsante nel blu ufficiale, leggibile anche sopra la vetrata. Desktop e tablet restano invariati. I titoli delle card sono H3 sotto l’H2 «Le nostre soluzioni»; tutte le card sotto la hero sono differite. Il resto della homepage e le pagine interne non cambiano. Fonti, prompt e dimensioni: `references/hero-pt2-scene.json`; originali e derivati di lavoro in `references/hero-pt2-supplied/`.
 
 
-### Titolo con entrata a fuoco — 30 ottobre 2026
+### Precedente titolo con entrata a fuoco — 30 ottobre 2026
 
 Nel solo PT2 la macchina da scrivere è sostituita da frasi complete: ingresso a fuoco in 1,2 secondi, lettura per 3,2 secondi e uscita sfocata in 0,85 secondi, con una pausa di 0,1 secondi tra le frasi. «Il design che» compare una volta con un leggero effetto di messa a fuoco e poi resta fisso. Nessun cursore; spazio riservato dalla frase più lunga anche su mobile. La timeline GSAP si sospende fuori vista e quando la scheda è nascosta, riprende dallo stesso punto e viene rimossa al cambio pagina. Con movimento ridotto resta visibile la prima frase senza animazione. Foto, CTA e sezioni non cambiano.
 
 
 ### Hero mobile a schermo intero — 30 ottobre 2026
 
-La hero su smartphone occupa `100svh`: immagine, titolo e WhatsApp sono visibili nella prima schermata. La nuova inquadratura mostra la vetrata intera sul lato destro e colloca il testo sulla parete verticale di sinistra, con meno soffitto. Dopo il primo riscontro dell’utente viene scelta una prospettiva più aperta per dare più respiro alla vetrata e rendere più leggibile la pergola esterna. Nessuna deformazione CSS della foto. Il testo usa dimensioni adatte alla colonna laterale e resta animato con il focus approvato. Fonti, prompt completi, originali e WebP ottimizzati sono elencati in `references/hero-mobile-room.json`. Desktop, tablet e primo sito non sono modificati.
+La hero su smartphone occupa `100svh`: immagine, titolo e WhatsApp sono visibili nella prima schermata. La nuova inquadratura mostra la vetrata intera sul lato destro e colloca il testo sulla parete verticale di sinistra, con meno soffitto. Dopo il primo riscontro dell’utente viene scelta una prospettiva più aperta per dare più respiro alla vetrata e rendere più leggibile la pergola esterna. Nessuna deformazione CSS della foto. Il testo usa dimensioni adatte alla colonna laterale e resta animato con l’effetto ibrido descritto sotto. Fonti, prompt completi, originali e WebP ottimizzati sono elencati in `references/hero-mobile-room.json`. Desktop, tablet e primo sito non sono modificati.
 
 WhatsApp nella hero mobile usa lo stesso link blu sottolineato con freccia di tablet e desktop, senza riquadro, sfondo o padding da pulsante. Resta un’area interattiva alta almeno 44 px.
+
+
+### Titolo ibrido: scrittura e uscita sfumata — 30 ottobre 2026
+
+La frase variabile viene scritta lettera per lettera a 48 ms per carattere, resta completa per 3,2 secondi e sfuma con una lieve sfocatura in 0,85 secondi. Il contenuto viene azzerato solo dopo la dissolvenza, senza cancellazione a ritroso; segue una pausa di 0,22 secondi prima della frase successiva. GSAP TextPlugin, già incluso nella dipendenza GSAP, gestisce la scrittura senza aggiornamenti React per ogni carattere. «Il design che» resta fisso dopo l’ingresso iniziale. Il cursore e il testo sfumano insieme. Le copie invisibili delle frasi complete riservano la stessa altezza anche su mobile. La timeline mantiene sospensione fuori vista/a scheda nascosta, cleanup al cambio pagina e prima frase statica senza cursore con movimento ridotto. Fotografie, navbar, link WhatsApp e sezioni restano nella configurazione approvata.
