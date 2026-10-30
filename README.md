@@ -38,3 +38,5 @@ Nel solo PT2 la macchina da scrivere è sostituita da frasi complete: ingresso a
 ### Hero mobile a schermo intero — 30 ottobre 2026
 
 La hero su smartphone occupa `100svh`: immagine, titolo e WhatsApp sono visibili nella prima schermata. La nuova inquadratura mostra la vetrata intera sul lato destro e colloca il testo sulla parete verticale di sinistra, con meno soffitto. Dopo il primo riscontro dell’utente viene scelta una prospettiva più aperta per dare più respiro alla vetrata e rendere più leggibile la pergola esterna. Nessuna deformazione CSS della foto. Il testo usa dimensioni adatte alla colonna laterale e resta animato con il focus approvato. Fonti, prompt completi, originali e WebP ottimizzati sono elencati in `references/hero-mobile-room.json`. Desktop, tablet e primo sito non sono modificati.
+
+WhatsApp nella hero mobile usa lo stesso link blu sottolineato con freccia di tablet e desktop, senza riquadro, sfondo o padding da pulsante. Resta un’area interattiva alta almeno 44 px.
